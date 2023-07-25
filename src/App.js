@@ -1,24 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import {HashRouter, Route, Routes} from 'react-router-dom'
+import Favorite from './component/favorites/Favorite';
+import Watch from './component/watchfav/Watch';
+import Kdashboard from "./pages/kids/Kdashboard";
+import Layout from "./pages/layout/Layout";
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <HashRouter>
+      
+    <Routes>
+      <Route path ="/" element={<Layout/>}>
+          <Route index element={<Kdashboard/>}/>
+
+          <Route path ="kdashboard/*" element={<Kdashboard/>}>
+              <Route index element={<Watch/>}/>
+              <Route path='favorite' element={<Favorite/>}/>
+          </Route>
+      </Route>
+        
+          {/* <Route path="*" element={<NotFound/>} */}
+    
+  </Routes>
+</HashRouter>
+
+
   );
 }
 
