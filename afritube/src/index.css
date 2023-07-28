@@ -1,0 +1,137 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+  background-color: #F7FBFE;
+  font-family: 'Belanosima', sans-serif;
+}
+audio{
+  background-color: transparent;
+}
+.active{ 
+  color:black
+}
+
+.btnHover{ 
+  background-color: black;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+.gradient {
+    background: linear-gradient(to bottom, #6AC4FF, #F7FBFE);
+  }
+
+  .blue-background {
+    background: linear-gradient(to right, #6AC4FF 70%, #F7FBFE);
+  }
+
+  @media(max-width: 768px){
+    .blue-background {
+      background: #6AC4FF;
+  }
+  }
+  .inp input[type="range"]::-webkit-slider-thumb {
+    background-color: red;
+  }
+
+  .btn-bg{
+    background: linear-gradient(to right, #7BCBFF, #12A1FF);
+  }
+  
+
+  .navbtn-bg{
+    background: linear-gradient(to right, #7BCBFF, #0066A9);
+  }
+
+  .pre-footer{
+    background: linear-gradient(to right, #97D6FF 75%, #FFEA7C);
+  }
+
+  @keyframes flow{
+    0% {
+      transform: translateX(-200%);
+    }
+  
+    100% {
+      transform: translateX(100%);
+    }
+  }
+
+  .flow-animation {
+    position: relative;
+    overflow: hidden;
+    height: 30px;
+  }
+
+  .flow-animation h2 {
+    top: 10%;
+    left: 0%;
+    width: 200px;
+    text-align: center;
+    color: #ffffff;
+    animation: flow 4s infinite linear;
+  }
+  
+@keyframes slide-in {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes slide-out {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+    display: flex;
+  }
+}
+
+.animate-slide-in {
+  animation: slide-in 0.3s ease-in-out forwards;
+}
+.animate-slide-out {
+  animation: slide-out 0.3s ease-in-out forwards;
+}
+
+  .hamburger{
+    display: flex;
+    flex-direction: column;
+  }
+  .hamburger span{
+    height: 3px;
+    width: 25px;
+    background-color: black;
+    position: absolute;
+    right: 0;
+    border-radius: 8px;
+    transition: 0.5s;
+  }
+
+  .hamburger span:nth-child(1){
+     transform: translateY(-6px);
+  }
+
+  .hamburger span:nth-child(3){
+    transform: translateY(6px);
+ }
+
+ .hamburger .activeBar:nth-child(1){
+   transform: translateY(0px);
+   rotate: 45deg;
+   transition-delay: 0.025s;
+ }
+ .hamburger .activeBar:nth-child(2){
+  opacity: 0;
+}
+.hamburger .activeBar:nth-child(3){
+  transform: translateY(0px);
+  rotate: -45deg;
+  transition-delay: 0.015s;
+}
