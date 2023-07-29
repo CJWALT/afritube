@@ -5,6 +5,7 @@ import { MdFavorite } from "react-icons/md";
 import Favouritecontext from "../store/reducer";
 import { BiPlay, BiHeart } from "react-icons/bi";
 import { FaSadTear } from "react-icons/fa";
+import AudioPlayer from "../components/AudioPlayer";
 
 const AudioFavourites = () => {
   const ctx = useContext(Favouritecontext);
@@ -20,10 +21,10 @@ const AudioFavourites = () => {
   console.log(favourites);
 
   return (
-    <div className="container mx-auto bg-secBlue rounded-xl p-7 mx-8 ">
-      {favourites.length > 0 && <div className="flex flex-wrap items-center my-6">
+    <div className="container mx-auto bg-secBlue rounded-xl p-7 mx-8">
+      {favourites.length > 0 && <div className="flex flex-wrap items-center justify-between my-6">
         {favourites.map((audio) => (
-          <div className="w-1/5 bg-white p-2 rounded-lg mx-4" key={audio.id}>
+          <div className="w-[100%] bg-white p-2 rounded-lg mx-4 sm:w-1/5" key={audio.id}>
             <img
               src={audio.thumbnail}
               alt="/"
@@ -38,11 +39,14 @@ const AudioFavourites = () => {
         ))}
       </div>}
       {favourites.length < 1 && 
-       <div className='p-4 flex flex-col items-center'>
+       <div className='p-4 flex flex-col items-center p-8'>
        <FaSadTear className='text-4xl'/>
        <h1 className='text-2xl my-4'>No Favourite Audio Books..</h1>
      </div>
       }
+      <div className="container ml-[-10px] mx-auto fixed w-[100%] top-[80vh]">
+      <AudioPlayer />
+      </div>
     </div>
   );
 };

@@ -31,10 +31,8 @@ function NavButton() {
             } p-2 rounded-full bg-white text-4xl`}
           />{" "}
         </NavLink>
-        <NavLink>
           {" "}
           <IoGameController className="p-2 text-[#8E8E8E] rounded-full bg-white text-4xl" />{" "}
-        </NavLink>
         <NavLink
           to="music"
           className={`relative flex items-center justify-center ${
@@ -49,10 +47,8 @@ function NavButton() {
             } p-2 rounded-full bg-white text-4xl`}
           />{" "}
         </NavLink>
-        <NavLink>
           {" "}
           <GiHut className="p-2 rounded-full text-[#8E8E8E] bg-white text-4xl" />{" "}
-        </NavLink>
       </div>
     </div>
   );

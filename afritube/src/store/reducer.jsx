@@ -40,12 +40,27 @@ const Favouritecontext = React.createContext({
       const filtered = state.audioFavourites.filter((audio)=> audio.id !== dispatch.payload.id)
       return {...state, audioFavourites: filtered}
     }
-    if(dispatch.type === 'PLAYAUDIO'){
-      if(state.recentlyPlayed.length > 4){
-        state.recentlyPlayed.pop()
+    if (dispatch.type === 'PLAYAUDIO') {
+      const updatedRecentlyPlayed = state.recentlyPlayed.filter(audio => audio.id !== dispatch.payload.id);
+      
+      if (state.recentlyPlayed.length > updatedRecentlyPlayed.length) {
+        updatedRecentlyPlayed.unshift(dispatch.payload);
+      } else {
+        if (updatedRecentlyPlayed.length >= 4) {
+          updatedRecentlyPlayed.pop();
+        }
+        updatedRecentlyPlayed.unshift(dispatch.payload);
       }
-      return {...state, playing: dispatch.payload, recentlyPlayed: [...state.recentlyPlayed, dispatch.payload]}
+      return {
+        ...state,
+        playing: dispatch.payload,
+        recentlyPlayed: updatedRecentlyPlayed
+      };
     }
+    if(dispatch.type === 'CLOSEPLAYER'){
+      return {...state, playing: null}
+    }
+    
     return state;
   }
 
@@ -54,7 +69,8 @@ const Favouritecontext = React.createContext({
       favourites: [],
       parentSecModal: false,
       audioFavourites: [],
-      recentlyPlayed: []
+      recentlyPlayed: [],
+      playing: null,
     })
 
   return (

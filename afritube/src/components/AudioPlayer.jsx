@@ -1,4 +1,4 @@
-import { BiPlay } from "react-icons/bi";
+import { BiPlay, BiX } from "react-icons/bi";
 import { BiPause } from "react-icons/bi";
 import stars from '../assets/PlayerStars.png'
 
@@ -14,7 +14,11 @@ const AudioPlayer = () => {
 
   const ctx = useContext(Favouritecontext)
   const play = ctx.state.playing;
-  console.log(play)
+  const closeHandler =()=> {
+    ctx.dispatch({
+      type: 'CLOSEPLAYER'
+    })
+  }
 
   const handlePlayPauseClick = () => {
     setPlaying((prevPlaying) => !prevPlaying);
@@ -45,8 +49,9 @@ const AudioPlayer = () => {
 
   return (
     <>
-   {play && <div className="w-full p-4 relative bg-[#0C1344] rounded-lg">
+   {play && <div className="w-full p-4 relative bg-[#0C1344] rounded-lg ml-[-14px]">
         <img src={stars} alt="/" className="absolute w-[100%] z-[9]"/>
+        <BiX className="absolute right-2 top-1 text-3xl text-white cursor-pointer z-[99]" onClick={closeHandler}/>
       <ReactPlayer
         ref={playerRef}
         url={play.audio}
@@ -66,9 +71,9 @@ const AudioPlayer = () => {
       />
 
       {/* Custom Controls */}
-      <div className="flex items-center justify-between w-full h-full z-[99]">
-        <span className="flex items-center ml-4">
-          <img src={play.thumbnail} alt="/" className="rounded-lg h-[80px] w-[80px] bg-white p-4 object-cover" />
+      <div className="flex flex-col items-center justify-between w-full h-full z-[99] sm:flex-row">
+        <span className="flex items-center sm:ml-4">
+          <img src={play.thumbnail} alt="/" className="rounded-lg h-[80px] w-[80px] bg-white p-2 object-cover" />
           <span className="text-white mx-2 text-[12px]">
             <h1>{play.name}</h1>
             <p>{play.categories}</p>
@@ -96,7 +101,7 @@ const AudioPlayer = () => {
           onMouseUp={handleSeekMouseUp}
           onTouchStart={handleSeekMouseDown}
           onTouchEnd={handleSeekMouseUp}
-          className="h-3 mx-2 w-[100%] h-[2px] z-[99] cursor-pointer inp"
+          className="h-3 mx-2 w-[100%] h-[2px] z-[99] cursor-pointer inp outline-0"
         />
         </div>
         
@@ -108,7 +113,7 @@ const AudioPlayer = () => {
             step="any"
             value={volume}
             onChange={handleVolumeChange}
-            className="h-[2px] mx-2 z-[99] cursor-pointer"
+            className="h-[2px] mx-2 z-[99] cursor-pointer w-[50px] outline-0"
           />
           <span className="text-white text-[12px] z-[99]">{(volume * 100).toFixed(0)}%</span>
         </div>

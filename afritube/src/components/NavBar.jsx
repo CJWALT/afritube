@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation, useNavigate } from "react-router-dom";
 import logo from "../assets/AFRITUBE-ICON.png";
 import Button from "./UI/Button";
 import Logo from "./UI/Logo";
@@ -7,13 +7,16 @@ import Logo from "./UI/Logo";
 const NavBar = () => {
   const [openSideBar, setOpenSideBar] = useState(null);
 
+
   useEffect(()=>{
     if(openSideBar){
      document.body.style.overflowY='hidden'
     }else if(!openSideBar){
       document.body.style.overflowY='auto' 
     }
+
   },[openSideBar])
+ 
 
   const openBarHandler = () => {
     setOpenSideBar((prev) => !prev);
@@ -37,6 +40,11 @@ const NavBar = () => {
     slide = "animate-slide-out";
   }
 
+  const onHandleNavchange =()=> {
+    setOpenSideBar(false)
+    console.log('yhayyyyyyy')
+  }
+
   return (
     <div className="bg-white">
       <div className="container flex items-center justify-between mx-auto p-2">
@@ -54,7 +62,7 @@ const NavBar = () => {
             <a className="font-medium mx-2 text-sm my-4 md:my-0">
               About&nbsp;Us
             </a>
-            <NavLink to='content' className="font-medium mx-2 text-sm my-4 md:my-0">Videos</NavLink>
+            <NavLink to='content' className="font-medium mx-2 text-sm my-4 md:my-0" onClick={onHandleNavchange}>Videos</NavLink>
             <a className="font-medium mx-2 text-sm my-4 md:my-0">Stories</a>
           </div>
           <div>

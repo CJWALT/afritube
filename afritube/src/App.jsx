@@ -39,7 +39,7 @@ function App() {
             { path: "/content/:videoId", element: <VideosPlayPage /> },
             { path: "music", element: <PlayLayout />,
               children: [
-                {index:true, element: <AudiBooks />},
+                {index:true, element: <AudiBooks />  },
                 {path: 'favourites', element: <AudioFavourites />}
               ]
           },

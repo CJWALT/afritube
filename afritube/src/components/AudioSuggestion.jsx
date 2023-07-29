@@ -3,10 +3,10 @@ import thesky from '../assets/Audio thumbnail/theSky.png'
 
 const AudioSuggestion = () => {
   return (
-    <div className="flex flex-col items-center my-8 w-[70%] mx-auto">
+    <div className="flex flex-col items-center my-8 w-[90%] mx-auto md:w-[70%]">
     <p className="text-[#8E8E8E] mx-2 self-start">Other stories like these...</p>
-    <div className="flex items-center my-4 bg-white p-4 border-[1px] border-primary rounded-lg">
-      <img src={thesky} alt="/" className="w-[85px]"/>
+    <div className="flex flex-col items-center my-4 bg-white p-4 border-[1px] border-primary rounded-lg sm:flex-row">
+      <img src={thesky} alt="/" className="w-[90%] sm:w-[85px]"/>
       <span className="mx-4">
         <h1>Why the sky is Far Away</h1>
         <p className="text-[#8E8E8E]">

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import logo from "../assets/AFRITUBE-ICON.png";
 import { BsGear } from "react-icons/bs";
 import {BiErrorCircle} from "react-icons/bi";
+import { Link } from "react-router-dom";
 
 const Security = () => {
   const [selectedDate, setSelectedDate] = useState("");
@@ -52,9 +53,11 @@ const Security = () => {
               <BsGear className="m-2" /> Settings & Security
             </h1>
           </span>
+          <Link to='/content'>
           <button className="border-[1px] border-black py-1 px-2 m-2">
             Go back to Afritube
           </button>
+          </Link>
         </header>
         <div className="flex flex-col items-center md:flex-row md:items-start">
           <ul className="mr-8 flex md:flex-col">

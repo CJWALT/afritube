@@ -2,7 +2,7 @@ import React, { useContext, useState } from "react";
 import logo from "../assets/AFRITUBE-ICON.png";
 import { NavLink } from "react-router-dom";
 import { ImHome3 } from "react-icons/im";
-import { RiParentFill } from "react-icons/ri";
+import { RiHomeGearFill, RiParentFill } from "react-icons/ri";
 import { FcBinoculars } from "react-icons/fc";
 import { BiSearch } from "react-icons/bi";
 import Favouritecontext from "../store/reducer";
@@ -47,6 +47,12 @@ const Header = () => {
               className="flex flex-row ml-2 align-center text-xl font-medium"
             >
               <ImHome3 className="self-center bg-gray-300 rounded-full p-2 text-4xl" />
+            </NavLink>
+            <NavLink
+              to="/security"
+              className="flex flex-row ml-2 align-center text-xl font-medium"
+            >
+               <RiHomeGearFill className="self-center rounded-full text-[grey] text-4xl p-2 bg-[lightgrey] hover:text-black"/>
             </NavLink>
           </div>
         </nav>

@@ -52,7 +52,7 @@ function VideoList() {
               </small>
             </div>
             <div className="flex flex-row justify-between mt-4">
-              <Rating />
+              <Rating numStars={video.rating}/>
              {favourites.find((vid) => vid.id === video.id) ? <MdFavorite className="cursor-pointer text-2xl text-[red]" onClick={()=>removeFromFav(video)}/> : <AiOutlineHeart className="text-2xl cursor-pointer" onClick={()=>addToFav(video)}/>}
             </div>
           </div>

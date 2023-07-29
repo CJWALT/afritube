@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { TbArrowsShuffle2 } from "react-icons/tb";
 import { MdDesktopMac, MdFavorite } from "react-icons/md";
@@ -8,6 +8,11 @@ import { ImSad } from "react-icons/im";
 import End from "./UI/End";
 
 function Watch() {
+
+  useEffect(()=>{
+    document.body.style.overflowY='auto' 
+  },[])
+
   return (
     <div className="container mx-auto">
       <div className="px-4"></div>
@@ -20,10 +25,10 @@ function Watch() {
             <button className="text-sm px-3 w-32  py-0 rounded-[.7rem] border-navButtonIcon border bg-watchBtnTypesBg hover:bg-black hover:text-white">
               Megas XLR{" "}
             </button>
-            <button className="text-sm px-3 w-32 py-0 rounded-[.7rem] border-navButtonIcon border bg-watchBtnTypesBg ">
+            <button className="text-sm px-3 w-32 py-0 rounded-[.7rem] border-navButtonIcon border bg-watchBtnTypesBg hover:bg-black hover:text-white">
               Superman{" "}
             </button>
-            <button className="px-3 py-0 w-32 text-sm rounded-[.7rem] border-navButtonIcon border bg-watchBtnTypesBg ">
+            <button className="px-3 py-0 w-32 text-sm rounded-[.7rem] border-navButtonIcon border bg-watchBtnTypesBg hover:bg-black hover:text-white">
               Baby shark{" "}
             </button>
           </div>

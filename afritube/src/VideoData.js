@@ -16,7 +16,8 @@ export const videos =  [
         "thumbnail": justiceL,
         "duration": "4 months ago",
         "video": justiceVid,
-        "length": 31
+        "length": 31,
+        "rating": 4,
       },
       {
         "id": 2,
@@ -24,7 +25,8 @@ export const videos =  [
         "thumbnail": KingJ,
         "duration": "3 months ago",
         "video": kingJVid,
-        "length": 28
+        "length": 28,
+        "rating": 3,
       },
       {
         "id": 3,
@@ -32,7 +34,8 @@ export const videos =  [
         "thumbnail": Cow,
         "duration": "5 months ago",
         "video": cowVid,
-        "length": 30
+        "length": 30,
+        "rating": 4,
       },
       {
         "id": 4,
@@ -40,7 +43,8 @@ export const videos =  [
         "thumbnail": spongebob,
         "duration": "2 months ago",
         "video": spongebobVid,
-        "length": 31
+        "length": 31,
+        "rating": 4,
       },
       {
         "id": 5,
@@ -48,7 +52,8 @@ export const videos =  [
         "thumbnail": superman,
         "duration": "6 months ago",
         "video": supermanVid,
-        "length": 28
+        "length": 28,
+        "rating": 3,
       },
       {
         "id": 6,
@@ -56,7 +61,8 @@ export const videos =  [
         "thumbnail": KingJ,
         "duration": "3 months ago",
         "video": kingJVid,
-        "length": 28
+        "length": 28,
+        "rating": 5,
       },
 ]
   

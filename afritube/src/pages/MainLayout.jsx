@@ -10,7 +10,7 @@ const MainLayout = () => {
   const parentsec = ctx.state.parentSecModal;
   console.log(parentsec)
   return (
-    <div className='bg-white h-[100vh]'>
+    <div className='bg-white h-[100%]'>
       <Header />
       <Kdashboard />
    { parentsec &&  <ParentSecModal /> }
