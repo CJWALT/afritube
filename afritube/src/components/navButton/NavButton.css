@@ -1,0 +1,7 @@
+.navActive{ 
+    background-color: blue;
+    border-radius:100%;
+    /* position:absolute;  */
+    width:40%;   
+    /* z-index:50; */
+}
