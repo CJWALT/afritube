@@ -13,7 +13,6 @@ const MainLayout = () => {
   const ctx = useContext(Favouritecontext)
   const parentsec = ctx.state.parentSecModal;
   const premiumModal = ctx.state.premiumModal;
-  console.log(parentsec)
   return (
     <div className='bg-white h-[100%]'>
       <Header />

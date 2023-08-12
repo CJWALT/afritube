@@ -55,7 +55,6 @@ const ParentSecModal = () => {
             <p className="text-sm font-medium">Enter Passcode</p>
             <form className="flex justify-between items-center py-2 px-4 bg-secBlue rounded-full">
               {inputRefs.map((inputRef, index) => (
-                console.log(inputValues),
                 <input
                   key={index}
                   ref={inputRef}

@@ -40,7 +40,6 @@ const NavBar = () => {
 
   const onHandleNavchange =()=> {
     setOpenSideBar(false)
-    console.log('yhayyyyyyy')
   }
 
   return (
