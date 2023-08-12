@@ -1,6 +1,4 @@
 import React, { useRef, useState } from "react";
-import CustomScroll from "react-custom-scroll";
-import parent from "../assets/stor3.jpg";
 import bird from "../assets/bird.png";
 import cloudLeft from "../assets/cloudLeft.png";
 import cloudRight from "../assets/cloudRight.png";
@@ -8,48 +6,54 @@ import strike from "../assets/lightning.png";
 import btm from "../assets/cloudbtm.png";
 import { FiArrowRight } from "react-icons/fi";
 import { FiArrowLeft } from "react-icons/fi";
-import PreFooter from "./PreFooter";
+import aisha from '../assets/Emily.jpg'
+import kwame from '../assets/chike.jpg'
+import zainab from '../assets/kristine.jpg'
+import chinedu from "../assets/stor3.jpg"
+import fatima from '../assets/jessica.jpg';
+import sipho from '../assets/pg1img.jpg';
+import tariro from '../assets/Loginbg.jpg'
 
 const reviews = [
   {
     name: "Aisha",
-    image: "https://example.com/aisha.jpg",
+    image: aisha,
     review: "This website is amazing! My kids love watching the videos.",
     parent: "Mother",
   },
   {
     name: "Kwame",
-    image: "https://example.com/kwame.jpg",
+    image: kwame,
     review: "Afritube has great content for children. Highly recommended!",
     parent: "Father",
   },
   {
     name: "Zainab",
-    image: "https://example.com/zainab.jpg",
+    image: zainab,
     review: "My daughter is learning a lot from the educational videos.",
     parent: "Mother",
   },
   {
     name: "Chinedu",
-    image: "https://example.com/chinedu.jpg",
+    image: chinedu,
     review: "Entertaining and informative. Thumbs up!",
     parent: "Father",
   },
   {
     name: "Fatima",
-    image: "https://example.com/fatima.jpg",
+    image: fatima,
     review: "As a parent, I'm happy with the safe and child-friendly content.",
     parent: "Mother",
   },
   {
     name: "Sipho",
-    image: "https://example.com/sipho.jpg",
+    image: sipho,
     review: "My son's favorite site. He enjoys the cartoons and music videos.",
     parent: "Father",
   },
   {
     name: "Tariro",
-    image: "https://example.com/tariro.jpg",
+    image: tariro,
     review: "Afritube promotes African culture beautifully. Well done!",
     parent: "Mother",
   },
@@ -129,7 +133,7 @@ const Testimonial = () => {
                   <h1 className="w-[100%]">"{review.review}"</h1>
                   <span className="flex items-center mt-4">
                     <img
-                      src={parent}
+                      src={review.image}
                       alt="parent image"
                       className="w-[50px] h-[50px] rounded-full object-cover"
                     />
@@ -150,12 +154,12 @@ const Testimonial = () => {
           <img src={btm} className="z-0 opacity-0 md:opacity-100"/>
           <div className="flex relative z-[99]">
             <span className="p-8 bg-white rounded-full absolute right-[90px]">
-              <button className="p-4 bg-[grey] rounded-full text-white" onClick={scrollLeftHandler}>
+              <button className="p-4 bg-[grey] rounded-full text-white outline-0" onClick={scrollLeftHandler}>
                 <FiArrowLeft />
               </button>
             </span>
             <span className="p-8 bg-white rounded-full absolute right-0">
-              <button className="p-4 btn-bg rounded-full text-white" onClick={scrollRightHandler}>
+              <button className="p-4 btn-bg rounded-full text-white outline-0" onClick={scrollRightHandler}>
                 <FiArrowRight />
               </button>
             </span>

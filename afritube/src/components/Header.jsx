@@ -21,7 +21,7 @@ const Header = () => {
     <>
       <header className="bg-white container mx-auto">
         <nav
-          className="mx-auto flex items-center justify-between p-4"
+          className="mx-auto flex flex-col items-center justify-between p-4 lt:flex-row"
           aria-label="Global"
         >
          <Logo />

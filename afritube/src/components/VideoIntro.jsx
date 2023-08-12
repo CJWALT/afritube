@@ -29,7 +29,7 @@ const VideoIntro = () => {
              <img src={sidecloud} className="w-[50px] absolute bottom-[0px] left-[-30px]" />
              <img src={sidecloud} className="w-[50px] absolute bottom-[0px] right-[-20px]" />
              <img src={sidecloud} className="w-[50px] absolute top-[-15px] right-[-10px]" />
-            <video controls  className="bg-white p-4 w-[400px] p-[20px] relative z-[99]">
+            <video controls  className="bg-white p-4 w-[400px] h-[250px] object-cover rounded-lg p-[20px] relative z-[99]">
               <source src={vid} type="video/mp4"/>
             </video>
           </div>

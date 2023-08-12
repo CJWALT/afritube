@@ -1,12 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { NavLink, useLocation, useNavigate } from "react-router-dom";
-import logo from "../assets/AFRITUBE-ICON.png";
 import Button from "./UI/Button";
 import Logo from "./UI/Logo";
 
 const NavBar = () => {
   const [openSideBar, setOpenSideBar] = useState(null);
-
 
   useEffect(()=>{
     if(openSideBar){

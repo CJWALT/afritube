@@ -5,6 +5,7 @@ import cloudSm from "../assets/VectorCloud.png";
 import cloudBig from "../assets/vectorBig.png";
 import stars from "../assets/stars.png";
 import musicPreview from "../assets/musicPreview.png";
+import {Link} from 'react-router-dom'
 
 const MusicIntro = () => {
   const [clickPromt, setClickPromt] = useState(false)
@@ -36,15 +37,19 @@ const MusicIntro = () => {
               Dive into an immersive world of thrilling adventures and
               challenges with our captivating selection of games!
             </h2>
+            <Link to='/content/music'>
             <Button
               spec="relative z-[99] my-4 bg-white text-black hover:bg-[grey]"
               cta="View Music & Audio Books"
             />
+            </Link>
           </div>
+          <Link to='/content/music'>
           <div className="relative">
             <img src={musicPreview} alt="/" className="cursor-pointer my-4" onMouseOver={()=> setClickPromt(true)} onMouseLeave={()=> setClickPromt(false)}/>
             {clickPromt && <h1 className="bg-white p-4 absolute top-[20px] rounded-full cursor-pointer" onMouseOver={()=> setClickPromt(true)}>Click to Listen to music and Audio books</h1>}
           </div>
+          </Link>
         </div>
       </div>
     </div>

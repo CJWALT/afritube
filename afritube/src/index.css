@@ -5,6 +5,7 @@
 body{
   background-color: #F7FBFE;
   font-family: 'Belanosima', sans-serif;
+  scroll-behavior: smooth;
 }
 audio{
   background-color: transparent;

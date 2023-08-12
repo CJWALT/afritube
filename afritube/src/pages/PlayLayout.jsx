@@ -16,7 +16,7 @@ const WatchLayout = () => {
 
   return (
     <div className='container mx-auto bg-white'>
-             <div className="flex justify-left pl-[76px]">
+             <div className="flex flex-col justify-left pl-[76px] lt:flex-row">
              <div className="flex flex-col align-center text-sm ">
             <NavLink to="/content/music" className={ !isWatchLayoutActive ? 'bg-secBlue rounded-t py-2 mx-1 px-4 flex flex-col' : 'py-2 mx-1 px-4 flex flex-col'}>
               <BiPlay className="self-center text-xl" />

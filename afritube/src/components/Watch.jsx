@@ -13,6 +13,10 @@ function Watch() {
     document.body.style.overflowY='auto' 
   },[])
 
+  useEffect(()=>{
+    window.scrollTo(0, 0);
+  },[])
+
   return (
     <div className="container mx-auto">
       <div className="px-4"></div>

@@ -7,6 +7,8 @@ const Favouritecontext = React.createContext({
     audioFavourites: [],
     recentlyPlayed: [],
     playing: null,
+    vidCount: 0,
+    premiumModal: false,
   });
 
   const reducer = (state, dispatch) => {
@@ -21,6 +23,13 @@ const Favouritecontext = React.createContext({
     if(dispatch.type === 'REMOVE'){
       const filtered = state.favourites.filter((video)=> video.id !== dispatch.payload.id)
       return {...state, favourites: filtered}
+    }
+    if(dispatch.type === 'PLAYED'){
+      let isVisible = state.vidCount > 0 && state.vidCount % 3 === 0
+       return {...state, vidCount: state.vidCount ++, premiumModal: isVisible}
+    }
+    if(dispatch.type === 'CLOSECOUNTDOWN'){
+      return {...state, premiumModal: false}
     }
     if(dispatch.type === 'PARENTSEC'){
       return {...state, parentSecModal: !state.parentSecModal}
@@ -71,6 +80,8 @@ const Favouritecontext = React.createContext({
       audioFavourites: [],
       recentlyPlayed: [],
       playing: null,
+      vidCount: 0,
+      premiumModal: false,
     })
 
   return (

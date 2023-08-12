@@ -18,6 +18,12 @@ export default {
       colors: {
         primary: '#6AC4FF',
         secBlue: '#F0F9FF',
+          
+        'videoListDetailColor': '#EEEFEF',
+        'bgCount' :'#6AC4FF',
+        'bgGrad' :'#DEDEDE',
+        'linkGray': '#898989',
+        'bgNot' : '#F0F9FF'
     },
     },
   },

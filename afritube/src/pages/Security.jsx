@@ -3,6 +3,7 @@ import logo from "../assets/AFRITUBE-ICON.png";
 import { BsGear } from "react-icons/bs";
 import {BiErrorCircle} from "react-icons/bi";
 import { Link } from "react-router-dom";
+import graph from '../assets/securityGraph.png'
 
 const Security = () => {
   const [selectedDate, setSelectedDate] = useState("");
@@ -84,9 +85,12 @@ const Security = () => {
                 ))}
               </select>
               <h1>
-                <span className="text-9xl">{screenTime}</span>hrs.
+                <span className="text-5xl">{screenTime}</span>hrs.
               </h1>
               <p className="text-[green]">Healthy</p>
+              <div className="flex justify-center align-center">
+                <img src={graph} alt="/" className="w-[100%] my-8 md:w-[70%]"/>
+              </div>
             </div>
             <div className="bg-white p-4 mt-2 border-[1px] border-primary rounded-lg flex flex-col justify-between md:items-center md:flex-row md:p-8 md:mt-8">
               <span>

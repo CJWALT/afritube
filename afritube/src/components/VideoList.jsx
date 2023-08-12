@@ -23,7 +23,12 @@ function VideoList() {
       payload: e,
      })
   }
-  
+  const playedVid =()=> {
+    ctx.dispatch({
+      type: 'PLAYED'
+     })
+  }
+
  const favourites = ctx.state.favourites;
 
   return (
@@ -34,6 +39,7 @@ function VideoList() {
             <img
               src={video.thumbnail}
               className=" h-[100%] rounded w-full object-cover rounded-t-[2rem]"
+              onClick={playedVid}
             />
           </Link>
           <div className="bg-white w-[100%] px-6 py-4 rounded-b-[2rem] md:w-72">

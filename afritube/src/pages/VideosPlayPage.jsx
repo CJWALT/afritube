@@ -5,6 +5,7 @@ import { videos } from "../VideoData";
 import { Link } from "react-router-dom";
 import { BiArrowBack } from "react-icons/bi";
 import { FaSadTear } from "react-icons/fa";
+import Countdown from "../components/Countdown";
 
 const VideosPlayPage = () => {
   const params = useParams();
@@ -15,9 +16,9 @@ const VideosPlayPage = () => {
   return (
     <>
       {selectedVid ? (
-        <div className="flex flex-col items-center">
+        <div className="flex flex-col items-center z-[99]">
           <Link to="/content">
-            <div className="fixed inset-0 z-[99] bg-[#000000d3] h-[100vh] w-full  flex items-center justify-center" />
+            <div className="fixed inset-0 z-[999] bg-[#000000d3] h-[100vh] w-full  flex items-center justify-center" />
           </Link>
           <div className="container mx-auto my-4 absolute top-[10%] z-[999]">
             <Link to="/content">
