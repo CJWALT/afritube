@@ -13,7 +13,7 @@ const MainLayout = () => {
   const ctx = useContext(Favouritecontext)
   const parentsec = ctx.state.parentSecModal;
   const premiumModal = ctx.state.premiumModal;
-  return (
+  return ( 
     <div className='bg-white h-[100%]'>
       <Header />
       <Kdashboard />
