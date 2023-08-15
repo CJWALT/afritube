@@ -1,5 +1,5 @@
 import React from "react";
-import grandma from "../assets/grandma.png";
+import grandma from "../assets/Grandma.png";
 import hut from "../assets/hutLogo.png";
 import topCloud from "../assets/cloudbtm.png";
 import rainCloud from '../assets/rainCloud.png'
