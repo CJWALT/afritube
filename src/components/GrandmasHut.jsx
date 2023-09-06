@@ -6,7 +6,7 @@ import rainCloud from '../assets/rainCloud.png'
 
 const GrandmasHut = () => {
   return (
-    <div className="bg-white relative z-[999] py-[80px]">
+    <div className="bg-white relative z-[999] px-[20px] py-[20px] sm:py-[80px]">
       <img src={rainCloud} className="z-0 absolute left-[-40px] top-[-120px] w-[250px] hidden md:left-[10%] sm:block"/>
       <img src={topCloud} className="z-0 absolute right-0 top-[-40px]"/>
       <div className="container mx-auto flex flex-col-reverse px-[0px] py-6 items-center justify-between md:flex-row xl:px-[200px]">

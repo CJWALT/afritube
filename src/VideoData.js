@@ -39,7 +39,7 @@ export const videos =  [
       },
       {
         "id": 4,
-        "name": "Sponge Bop",
+        "name": "Sponge Bob",
         "thumbnail": spongebob,
         "duration": "2 months ago",
         "video": spongebobVid,

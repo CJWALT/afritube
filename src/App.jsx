@@ -11,8 +11,19 @@ import { FavouritesReducer } from "./store/reducer";
 import VideosPlayPage from "./pages/VideosPlayPage";
 import AudiBooks from "./components/AudiBooks";
 import AudioFavourites from "./pages/AudioFavourites";
+import { element } from "prop-types";
+import { useEffect, useState } from "react";
+import Loader from "./components/loader/Loader";
 
 function App() {
+  const [loading, setisloading] = useState(true)
+  
+  useEffect(()=>{
+    setTimeout(() => {
+      setisloading(false)
+    }, 2000);
+  },[])
+
   const routes = createBrowserRouter([
     {
       path: "/",
@@ -49,9 +60,16 @@ function App() {
     },
   ]);
 
+  const loader = createBrowserRouter([
+    {
+      path: '/',
+      element: <Loader />
+    }
+  ])
+
   return (
     <FavouritesReducer>
-      <RouterProvider router={routes} />
+      <RouterProvider router={loading ? loader : routes } />
     </FavouritesReducer>
   );
 }

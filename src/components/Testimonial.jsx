@@ -84,6 +84,21 @@ const Testimonial = () => {
     sliderRef.current.scrollLeft = scrollLeft - walk;
   };
 
+  const handleTouchStart = (e) => {
+    setIsDown(true);
+    setStartX(e.touches[0].pageX - sliderRef.current.offsetLeft);
+    setScrollLeft(sliderRef.current.scrollLeft);
+  };
+
+  const handleTouchMove = (e) => {
+    if (!isDown) return;
+
+
+    const x = e.touches[0].pageX - sliderRef.current.offsetLeft;
+    const walk = (x - startX) * 2;
+    sliderRef.current.scrollLeft = scrollLeft - walk;
+  };
+
   const scrollRightHandler = () => {
     sliderRef.current.scrollLeft = sliderRef.current.scrollLeft + 500;
   };
@@ -125,6 +140,9 @@ const Testimonial = () => {
           onMouseUp={handleMouseUp}
           onMouseMove={handleMouseMove}
           onMouseLeave={()=>setIsDown(false)}
+          onTouchStart={handleTouchStart}
+          onTouchMove={handleTouchMove}
+          onTouchEnd={handleMouseUp}
         >
           {reviews.map((review) => (
             <div className={`mx-4 m`} key={review.name}>

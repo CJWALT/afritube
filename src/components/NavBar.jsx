@@ -60,7 +60,7 @@ const NavBar = () => {
               About&nbsp;Us
             </a>
             <NavLink to='content' className="font-medium mx-2 text-sm my-4 md:my-0" onClick={onHandleNavchange}>Videos</NavLink>
-            <a className="font-medium mx-2 text-sm my-4 md:my-0">Stories</a>
+            <NavLink to='content/music' className="font-medium mx-2 text-sm my-4 md:my-0">Stories</NavLink>
           </div>
           <div>
           <NavLink to='content'>

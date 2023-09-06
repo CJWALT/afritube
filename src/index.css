@@ -50,6 +50,25 @@ audio{
   .pre-footer{
     background: linear-gradient(to right, #97D6FF 75%, #FFEA7C);
   }
+   
+  @keyframes bounce {
+    0%, 100% {
+        transform: translate(-50%, -50%) translateY(0);
+    }
+    50% {
+        transform: translate(-50%, -50%) translateY(-100px);
+    }
+}
+
+  .bounce-animation{
+    background-color: #adc7da;
+    padding: 4px;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    animation: bounce 1s infinite;
+  }
 
   @keyframes flow{
     0% {
