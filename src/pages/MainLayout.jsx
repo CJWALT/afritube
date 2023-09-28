@@ -17,7 +17,7 @@ const MainLayout = () => {
     <div className='bg-white h-[100%]'>
       <Header />
       <Kdashboard />
-    {premiumModal &&  <Countdown /> }
+    {premiumModal ?  <Countdown /> : '' }
    { parentsec &&  <ParentSecModal /> }
       <Outlet />
     </div>
