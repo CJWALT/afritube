@@ -1,9 +1,9 @@
 import React, {useState, useEffect, useRef, useContext} from 'react'
 import cloudTop from '../assets/countdownCloud.png'
-import Rcloud from '../assets/img/r-Cloud.png'
+import Rcloud from '../assets/img/r-cloud.png'
 import simp from '../assets/img/simp.png'
 import poly from '../assets/img/poly.png'
-import vect from '../assets/img/vector.png'
+import vect from '../assets/img/Vector.png'
 import { BiX } from 'react-icons/bi'
 import Favouritecontext from '../store/reducer'
 
