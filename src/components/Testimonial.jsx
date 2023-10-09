@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import bird from "../assets/bird.png";
 import cloudLeft from "../assets/cloudLeft.png";
 import cloudRight from "../assets/cloudRight.png";
@@ -6,13 +6,13 @@ import strike from "../assets/lightning.png";
 import btm from "../assets/cloudbtm.png";
 import { FiArrowRight } from "react-icons/fi";
 import { FiArrowLeft } from "react-icons/fi";
-import aisha from '../assets/Emily.jpg'
-import kwame from '../assets/chike.jpg'
-import zainab from '../assets/kristine.jpg'
-import chinedu from "../assets/stor3.jpg"
-import fatima from '../assets/jessica.jpg';
-import sipho from '../assets/pg1img.jpg';
-import tariro from '../assets/Loginbg.jpg'
+import aisha from "../assets/Emily.jpg";
+import kwame from "../assets/chike.jpg";
+import zainab from "../assets/kristine.jpg";
+import chinedu from "../assets/stor3.jpg";
+import fatima from "../assets/jessica.jpg";
+import sipho from "../assets/pg1img.jpg";
+import tariro from "../assets/Loginbg.jpg";
 
 const reviews = [
   {
@@ -64,6 +64,20 @@ const Testimonial = () => {
   const [isDown, setIsDown] = useState(false);
   const [startX, setStartX] = useState(0);
   const [scrollLeft, setScrollLeft] = useState(0);
+  const [move, setMove] = useState(500);
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth < 760) {
+        setMove(330);
+      }
+    };
+    window.addEventListener('resize', handleResize);
+    handleResize()
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
 
   const handleMouseDown = (e) => {
     setIsDown(true);
@@ -93,22 +107,21 @@ const Testimonial = () => {
   const handleTouchMove = (e) => {
     if (!isDown) return;
 
-
     const x = e.touches[0].pageX - sliderRef.current.offsetLeft;
     const walk = (x - startX) * 2;
     sliderRef.current.scrollLeft = scrollLeft - walk;
   };
 
   const scrollRightHandler = () => {
-    sliderRef.current.scrollLeft = sliderRef.current.scrollLeft + 500;
+    sliderRef.current.scrollLeft = sliderRef.current.scrollLeft + move;
   };
   const scrollLeftHandler = () => {
-    sliderRef.current.scrollLeft = sliderRef.current.scrollLeft - 500;
+    sliderRef.current.scrollLeft = sliderRef.current.scrollLeft - move;
   };
 
   return (
     <section className="relative bg-[#F1F1F1] mb-[-170px]">
-       <img
+      <img
         src={cloudLeft}
         alt="cloud"
         className="absolute top-[-160px] left-0 z-[9]"
@@ -128,18 +141,18 @@ const Testimonial = () => {
         <h1 className="font-semibold text-xl text-center text-black">
           What parents say about us
         </h1>
-             <img
-            src={bird}
-            alt="bird svg"
-            className="absolute hidden top-[50px] right-[20%] w-[80px] z-[999] md:block"
-          />
+        <img
+          src={bird}
+          alt="bird svg"
+          className="absolute hidden top-[50px] right-[20%] w-[80px] z-[999] md:block"
+        />
         <div
-        className="flex overflow-hidden cursor-pointer"
+          className="flex overflow-hidden cursor-pointer"
           ref={sliderRef}
           onMouseDown={handleMouseDown}
           onMouseUp={handleMouseUp}
           onMouseMove={handleMouseMove}
-          onMouseLeave={()=>setIsDown(false)}
+          onMouseLeave={() => setIsDown(false)}
           onTouchStart={handleTouchStart}
           onTouchMove={handleTouchMove}
           onTouchEnd={handleMouseUp}
@@ -169,15 +182,21 @@ const Testimonial = () => {
         </div>
 
         <div className="flex justify-between w-[100%] mt-8 relative z-10">
-          <img src={btm} className="z-0 opacity-0 md:opacity-100"/>
+          <img src={btm} className="z-0 opacity-0 md:opacity-100" />
           <div className="flex relative z-[99]">
             <span className="p-8 bg-white rounded-full absolute right-[90px]">
-              <button className="p-4 bg-[grey] rounded-full text-white outline-0" onClick={scrollLeftHandler}>
+              <button
+                className="p-4 bg-[grey] rounded-full text-white outline-0"
+                onClick={scrollLeftHandler}
+              >
                 <FiArrowLeft />
               </button>
             </span>
             <span className="p-8 bg-white rounded-full absolute right-0">
-              <button className="p-4 btn-bg rounded-full text-white outline-0" onClick={scrollRightHandler}>
+              <button
+                className="p-4 btn-bg rounded-full text-white outline-0"
+                onClick={scrollRightHandler}
+              >
                 <FiArrowRight />
               </button>
             </span>
