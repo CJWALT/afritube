@@ -71,7 +71,7 @@ const Favourites = () => {
       ) : (
         <div className="p-4 flex flex-col items-center">
           <FaSadTear className="text-4xl" />
-          <h1 className="text-2xl">No Favourite Videos..</h1>
+          <h1 className="text-8xl">No Favourite Videos..</h1>
         </div>
       )}
     </div>
