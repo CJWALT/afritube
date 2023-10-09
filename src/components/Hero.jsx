@@ -19,7 +19,7 @@ const Hero = () => {
             <img src={cloud} alt="hero tag" className="hidden w-[80px] sm:block"/>
           </div>
           <NavLink to='content'>
-          <Button cta='Get Started' spec='bg-black text-white my-4 hover:bg-[grey] self-start'/>
+          <Button cta='Start Free Trial' spec='bg-btn text-white my-4 hover:bg-[grey] self-start'/>
           </NavLink> 
           <img src={greenIll} alt='illustraion' className="w-[300px] self-end"/>
         </div>

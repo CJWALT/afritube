@@ -66,7 +66,7 @@ const NavBar = () => {
           <NavLink to='content'>
           <Button
               color="transparent"
-              spec="ml-[0px] border-2 border-[#D5EEFF] md:ml-[100px] hover:text-[grey]"
+              spec="ml-[0px] text-white md:ml-[100px] hover:bg-[grey] rounded bg-btn"
               cta="Get&nbsp;Started"
             />
           </NavLink>

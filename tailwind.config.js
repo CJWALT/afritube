@@ -18,7 +18,7 @@ export default {
       colors: {
         primary: '#6AC4FF',
         secBlue: '#F0F9FF',
-          
+        'btn': '#01878F', 
         'videoListDetailColor': '#EEEFEF',
         'bgCount' :'#6AC4FF',
         'bgGrad' :'#DEDEDE',
