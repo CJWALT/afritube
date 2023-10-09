@@ -21,10 +21,10 @@ const PreFooter = () => {
               where they feel supported and challenged.
             </p>
             <span className="flex flex-col sm:flex-row">
-              <button className="bg-white px-4 py-2 my-2 text-start rounded-lg flex items-center outline-0 text-linkGray sm:text-center">
+              <button className="bg-white px-4 py-2 my-2 mr-0 text-start rounded-lg flex items-center outline-0 text-linkGray sm:text-center sm:mr-3">
                 <FaApple className="mr-2 text-xl mb-1" /> Get on Apple
               </button>
-              <button className="bg-white px-4 py-2 my-2 text-start rounded-lg flex items-center outline-0 text-linkGray sm:text-center">
+              <button className="bg-white px-4 py-2 my-2 mr-0 text-start rounded-lg flex items-center outline-0 text-linkGray sm:text-center sm:mr-3">
                 <FaGooglePlay className="mr-2" /> Get on Google Play
               </button>
               <img
