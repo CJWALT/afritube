@@ -23,7 +23,7 @@ const AudiBooks = () => {
         </button>
         <button className="px-3 py-0 w-32 text-sm rounded-[.7rem] border-navButtonIcon border bg-watchBtnTypesBg hover:bg-black hover:text-white">
           Fables{" "}
-        </button>
+        </button> 
       </div>
      {recentlyPlayed.length > 0 && <span className="flex flex-col justify-center">
         <h1 className="mx-4 text-xl text-[#8E8E8E]">Recently Played</h1>
