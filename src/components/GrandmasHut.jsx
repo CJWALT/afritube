@@ -18,7 +18,7 @@ const GrandmasHut = () => {
             Grand Ma<br/> welcomes you to her hut
           </h2>
           <p>Step into Grandma's hut and experience her <br /> heartwarming hospitality like never before.</p>
-          <NavLink to='content'>
+          <NavLink to='/'>
           <Button
               color="transparent"
               spec="ml-[0px] text-white text-sm my-3 px-8 py-2 hover:bg-[grey] rounded bg-btn"
