@@ -11,17 +11,20 @@ import { FavouritesReducer } from "./store/reducer";
 import VideosPlayPage from "./pages/VideosPlayPage";
 import AudiBooks from "./components/AudiBooks";
 import AudioFavourites from "./pages/AudioFavourites";
-import { element } from "prop-types";
 import { useEffect, useState } from "react";
 import Loader from "./components/loader/Loader";
+import GrandMaHut from "./pages/GrandMaHut";
+import AfricanLiterature from "./components/GrandmasHut/AfricanLiterature";
 
 function App() {
   const [loading, setisloading] = useState(true)
+
+  const param = window.location.pathname
   
   useEffect(()=>{
     setTimeout(() => {
       setisloading(false)
-    }, 2000);
+    }, 1000);
   },[])
 
   const routes = createBrowserRouter([
@@ -54,6 +57,7 @@ function App() {
                 {path: 'favourites', element: <AudioFavourites />}
               ]
           },
+          { path: "grandma", element: <GrandMaHut />},
           ],
         },
       ],
@@ -62,7 +66,7 @@ function App() {
 
   const loader = createBrowserRouter([
     {
-      path: '/',
+      path: param,
       element: <Loader />
     }
   ])

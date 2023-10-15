@@ -9,9 +9,14 @@ import "../navButton/NavButton.jsx";
 function NavButton() {
   const location = useLocation();
   const [ismusicLayoutActive, setIsmusicLayoutActive] = useState(false);
+  const [isgrandmaHutActive, setIsgrandmaHutActive] = useState(false);
 
   useEffect(() => {
     setIsmusicLayoutActive(location.pathname.includes("/music"));
+  }, [location]);
+
+  useEffect(() => {
+    setIsgrandmaHutActive(location.pathname.includes("/grandma"));
   }, [location]);
 
   return (
@@ -20,19 +25,19 @@ function NavButton() {
         <NavLink
           to="/content"
           className={`relative flex items-center justify-center ${
-            !ismusicLayoutActive && "mx-12"
+            !ismusicLayoutActive && !isgrandmaHutActive && "mx-12"
           }`}
         >
           {" "}
           <BiSolidVideos
             className={`${
-              !ismusicLayoutActive &&
+              !ismusicLayoutActive && !isgrandmaHutActive &&
               "navbtn-bg text-white p-[20px] absolute text-[75px]"
             } p-2 rounded-full bg-white text-4xl`}
           />{" "}
         </NavLink>
           {" "}
-          <IoGameController className="p-2 text-[#8E8E8E] rounded-full bg-white text-4xl" />{" "}
+          <IoGameController className="p-2 text-[#8E8E8E] rounded-full bg-white text-4xl" />
         <NavLink
           to="music"
           className={`relative flex items-center justify-center ${
@@ -47,8 +52,22 @@ function NavButton() {
             } p-2 rounded-full bg-white text-4xl`}
           />{" "}
         </NavLink>
+        <NavLink
+          to="grandma"
+          className={`relative flex items-center justify-center ${
+            isgrandmaHutActive && "mx-12"
+          }`}
+        >
           {" "}
-          <GiHut className="p-2 rounded-full text-[#8E8E8E] bg-white text-4xl" />{" "}
+          <GiHut
+            className={`${
+              isgrandmaHutActive &&
+              "navbtn-bg text-white p-[20px] absolute text-[75px]"
+            } p-2 rounded-full bg-white text-4xl`}
+          />{" "}
+        </NavLink>
+
+        
       </div>
     </div>
   );
