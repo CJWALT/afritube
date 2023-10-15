@@ -49,7 +49,6 @@ const AudioFavourites = () => {
           </div>
         ))}
       </div>
-      <End />
       </>}
       {favourites.length < 1 && 
        <div className='p-4 flex flex-col items-center p-8'>

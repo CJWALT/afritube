@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import { IoIosPartlySunny } from "react-icons/io";
 import NavButton from "./navButton/NavButton";
+import End from "./UI/End";
 
 function getGreeting() {
   const currentHour = new Date().getHours();
@@ -14,6 +15,7 @@ function getGreeting() {
 }
 
 function Kdashboard() {
+  const [showEnd, setShowEnd] = useState(true)
   const greeting = getGreeting();
 
   return (
@@ -22,6 +24,7 @@ function Kdashboard() {
         <IoIosPartlySunny className="mr-2 self-center" /> {greeting}
       </h4>
       <NavButton />
+      {showEnd && <End show={setShowEnd}/>}
     </>
   );
 }

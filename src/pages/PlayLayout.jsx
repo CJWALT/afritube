@@ -4,6 +4,7 @@ import { useLocation } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import { MdDesktopMac, MdFavorite } from "react-icons/md";
 import { BiPlay } from 'react-icons/bi';
+import End from '../components/UI/End';
 
 const WatchLayout = () => {
  

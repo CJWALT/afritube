@@ -1,13 +1,18 @@
-import React from 'react'
-import { ImSad } from 'react-icons/im'
+import React from "react";
+import Button from "./Button";
+import { BiX } from "react-icons/bi";
 
-const End = () => {
+const End = ({show}) => {
   return (
-    <div className="p-4 mb-[60px] flex justify-center items-center text-3xl font-bold text-[#8E8E8E]">
-    <h1 className="mx-2">The End</h1>
-    <ImSad />
-  </div>
-  )
-}
+    <div className="fixed z-[999] bottom-0 left-0 w-[100%] p-8 flex flex-col justify-center bg-[#6AC4FF] justify-between px-[20%] items-start md:flex-row md:items-center">
+      <div className="mb-8">
+        <h2 className="text-[#DF2935] text-xl">Explore AfriTube <br /> for The Kids You LOVE.</h2>
+        <p className="text-sm text-[#4C4A55]">Get you kids to enjoy learning in a safe environment</p>
+      </div>
+      <Button cta={"Subscribe for More"} spec={"bg-[#DF2935] text-white"}/>
+      <BiX className="absolute top-0 right-0 text-6xl text-[#DF2935] p-4 mr-4 cursor-pointer hover:text-[grey]" onClick={()=>show(false)}/>
+    </div>
+  );
+};
 
-export default End
+export default End;

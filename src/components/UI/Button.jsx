@@ -3,7 +3,7 @@ import React from "react";
 const Button = ({spec, cta}) => {
   return (
     <>
-      <button className={`${spec} py-1 px-4 rounded-md font-medium`}>
+      <button className={`${spec} py-1 px-4 font-medium rounded-full`}>
         {cta}
       </button>
     </>

@@ -4,11 +4,14 @@ import { BsGear } from "react-icons/bs";
 import {BiErrorCircle} from "react-icons/bi";
 import { Link } from "react-router-dom";
 import graph from '../assets/securityGraph.png'
+import End from "../components/UI/End";
 
 const Security = () => {
   const [selectedDate, setSelectedDate] = useState("");
   const [hours, setHours] = useState("");
   const [screenTime, setScreenTime] = useState(6)
+
+  const [showEnd, setShowEnd] = useState(true)
 
   const handleInput = (event) => {
     const value = event.target.value;
@@ -119,6 +122,7 @@ const Security = () => {
           </div>
         </div>
       </div>
+      {showEnd && <End show={setShowEnd}/>}
     </div>
   );
 };

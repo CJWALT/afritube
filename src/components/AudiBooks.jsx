@@ -38,7 +38,6 @@ const AudiBooks = () => {
         <h1 className="mx-4 text-xl text-[#8E8E8E]">Audio Books</h1>
         <AUdioList categories="audiobook" />
       </span>
-      <End />
       <div className="container mx-auto fixed w-[100%] top-[80vh] mx-auto">
       <AudioPlayer />
       </div>
