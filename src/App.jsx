@@ -9,12 +9,11 @@ import PlayLayout from './pages/PlayLayout'
 import WatchLayout from "./pages/WatchLayout";
 import { FavouritesReducer } from "./store/reducer";
 import VideosPlayPage from "./pages/VideosPlayPage";
-import AudiBooks from "./components/AudiBooks";
+import AudiBooks from "./components/GrandmasHut/AudiBooks";
 import AudioFavourites from "./pages/AudioFavourites";
 import { useEffect, useState } from "react";
 import Loader from "./components/loader/Loader";
 import GrandMaHut from "./pages/GrandMaHut";
-import AfricanLiterature from "./components/GrandmasHut/AfricanLiterature";
 
 function App() {
   const [loading, setisloading] = useState(true)
@@ -53,7 +52,6 @@ function App() {
             { path: "/content/:videoId", element: <VideosPlayPage /> },
             { path: "music", element: <PlayLayout />,
               children: [
-                {index:true, element: <AudiBooks />  },
                 {path: 'favourites', element: <AudioFavourites />}
               ]
           },

@@ -17,7 +17,7 @@ const WatchLayout = () => {
 
   return (
     <div className='container mx-auto'>
-             <div className="flex flex-col justify-left pl-[76px] lt:flex-row">
+             <nav className="flex flex-col justify-left pl-[76px] lt:flex-row">
           <div className="flex flex-col align-center text-sm">
             <NavLink to="/content" className={ !isWatchLayoutActive ? 'bg-secBlue rounded-t py-2 mx-1 px-4 flex flex-col' : 'py-2 mx-1 px-4 flex flex-col'}>
               <MdDesktopMac className="self-center text-xl" />
@@ -31,7 +31,7 @@ const WatchLayout = () => {
               Favorites
             </NavLink>
           </div>
-        </div>
+        </nav>
         <Outlet />
     </div>
   )

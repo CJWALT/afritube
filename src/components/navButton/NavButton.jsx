@@ -8,12 +8,7 @@ import { GiHut } from "react-icons/gi";
 import "../navButton/NavButton.jsx";
 function NavButton() {
   const location = useLocation();
-  const [ismusicLayoutActive, setIsmusicLayoutActive] = useState(false);
   const [isgrandmaHutActive, setIsgrandmaHutActive] = useState(false);
-
-  useEffect(() => {
-    setIsmusicLayoutActive(location.pathname.includes("/music"));
-  }, [location]);
 
   useEffect(() => {
     setIsgrandmaHutActive(location.pathname.includes("/grandma"));
@@ -25,33 +20,19 @@ function NavButton() {
         <NavLink
           to="/content"
           className={`relative flex items-center justify-center ${
-            !ismusicLayoutActive && !isgrandmaHutActive && "mx-12"
+             !isgrandmaHutActive && "mx-12"
           }`}
         >
           {" "}
           <BiSolidVideos
             className={`${
-              !ismusicLayoutActive && !isgrandmaHutActive &&
+               !isgrandmaHutActive &&
               "navbtn-bg text-white p-[20px] absolute text-[75px]"
             } p-2 rounded-full bg-white text-4xl`}
           />{" "}
         </NavLink>
           {" "}
           <IoGameController className="p-2 text-[#8E8E8E] rounded-full bg-white text-4xl" />
-        <NavLink
-          to="music"
-          className={`relative flex items-center justify-center ${
-            ismusicLayoutActive && "mx-12"
-          }`}
-        >
-          {" "}
-          <HiOutlineMusicNote
-            className={`${
-              ismusicLayoutActive &&
-              "navbtn-bg text-white p-[20px] absolute text-[75px]"
-            } p-2 rounded-full bg-white text-4xl`}
-          />{" "}
-        </NavLink>
         <NavLink
           to="grandma"
           className={`relative flex items-center justify-center ${
