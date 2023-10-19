@@ -51,9 +51,9 @@ function App() {
             },
             { path: "/content/:videoId", element: <VideosPlayPage /> },
             { path: "music", element: <PlayLayout />,
-              children: [
-                {path: 'favourites', element: <AudioFavourites />}
-              ]
+              // children: [
+              //   {path: 'favourites', element: <AudioFavourites />}
+              // ]
           },
           { path: "grandma", element: <GrandMaHut />},
           ],

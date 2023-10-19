@@ -41,7 +41,7 @@ const AUdioList = ({categories}) => {
         <p className="text-[12px] py-2 overflow-scroll">{audio.name}</p>
         <span className="flex text-xl justify-between items-center py-2">
           <BiPlay className="text-3xl rounded-full bg-primary p-2 text-white cursor-pointer" onClick={()=>playHandler(audio)}/>
-          {favourites.find((vid) => vid.id === audio.id) ? <MdFavorite className="cursor-pointer text-2xl text-[red]" onClick={()=>removeFromFav(audio)}/> : <AiOutlineHeart className="text-2xl cursor-pointer" onClick={()=>addHandler(audio)}/>}
+          {/* {favourites.find((vid) => vid.id === audio.id) ? <MdFavorite className="cursor-pointer text-2xl text-[red]" onClick={()=>removeFromFav(audio)}/> : <AiOutlineHeart className="text-2xl cursor-pointer" onClick={()=>addHandler(audio)}/>} */}
         </span>
       </div>
       ))}
