@@ -1,6 +1,7 @@
 import React from "react";
 import Button from "./Button";
 import { BiX } from "react-icons/bi";
+import { Link } from "react-router-dom";
 
 const End = ({show}) => {
   return (
@@ -9,7 +10,9 @@ const End = ({show}) => {
         <h2 className="text-[#DF2935] text-xl">Explore AfriTube <br /> for The Kids You LOVE.</h2>
         <p className="text-sm text-[#4C4A55]">Get you kids to enjoy learning in a safe environment</p>
       </div>
+      <Link to='/pricing'>
       <Button cta={"Subscribe for More"} spec={"bg-[#DF2935] text-white"}/>
+      </Link>
       <BiX className="absolute top-0 right-0 text-6xl text-[#DF2935] p-4 mr-4 cursor-pointer hover:text-[grey]" onClick={()=>show(false)}/>
     </div>
   );
