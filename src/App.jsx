@@ -14,6 +14,7 @@ import AudioFavourites from "./pages/AudioFavourites";
 import { useEffect, useState } from "react";
 import Loader from "./components/loader/Loader";
 import GrandMaHut from "./pages/GrandMaHut";
+import Pricing from "./pages/Pricing";
 
 function App() {
   const [loading, setisloading] = useState(true)
@@ -32,6 +33,7 @@ function App() {
       children: [
         { index: true, element: <HomePage /> },
         { path: "/security", element: <Security /> },
+        { path: "/pricing", element: <Pricing /> },
         {
           path: "content",
           element: <MainLayout />,

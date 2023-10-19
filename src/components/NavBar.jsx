@@ -59,11 +59,11 @@ const NavBar = () => {
             <a className="font-medium mx-2 text-sm my-4 md:my-0">
               About&nbsp;Us
             </a>
-            <NavLink to='content' className="font-medium mx-2 text-sm my-4 md:my-0" onClick={onHandleNavchange}>Videos</NavLink>
-            <NavLink to='content/music' className="font-medium mx-2 text-sm my-4 md:my-0">Stories</NavLink>
+            <NavLink to='/content' className="font-medium mx-2 text-sm my-4 md:my-0" onClick={onHandleNavchange}>Videos</NavLink>
+            <NavLink to='/content/music' className="font-medium mx-2 text-sm my-4 md:my-0">Stories</NavLink>
           </div>
           <div>
-          <NavLink to='content'>
+          <NavLink to='/content'>
           <Button
               color="transparent"
               spec="ml-[0px] text-white md:ml-[100px] hover:bg-[grey] rounded-full bg-btn"
