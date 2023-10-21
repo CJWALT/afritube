@@ -9,6 +9,7 @@ const Favouritecontext = React.createContext({
     playing: null,
     vidCount: 0,
     premiumModal: false,
+    textModal: false,
   });
 
   const reducer = (state, dispatch) => {
@@ -68,6 +69,10 @@ const Favouritecontext = React.createContext({
     }
     if(dispatch.type === 'CLOSEPLAYER'){
       return {...state, playing: null}
+    }if(dispatch.type === 'OPENTEXTMODAL'){
+      return {...state, textModal: true}
+    }if(dispatch.type === 'CLOSETEXTMODAL'){
+      return {...state, textModal: false}
     }
     
     return state;
@@ -82,6 +87,7 @@ const Favouritecontext = React.createContext({
       playing: null,
       vidCount: 0,
       premiumModal: false,
+      textModal: false,
     })
 
   return (
