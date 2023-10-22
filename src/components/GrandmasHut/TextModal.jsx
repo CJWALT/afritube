@@ -22,17 +22,18 @@ const TextModal = () => {
         setTextData(text)
       })
     } catch (error) {
-      setTextData('Somethign went Wrong, try Again')
+      setTextData('Loading...')
     }
   },[])
   
 
   
   return (
-    <div className='fixed top-0 left-0 p-8 bg-[#1c1b1ffb] w-[100%] h-[100vh] text-white px-[35px] md:px-[5%]'>
-      <BiX className='p-2 rounded-full bg-white my-4 text-4xl text-black absolute right-4 top-0 cursor-pointer z-[999]' onClick={closeModal}/>
+    <div className='fixed top-0 left-0 p-8 bg-[white] w-[100%] h-[100vh] text-[black] px-[35px] md:px-[5%]'>
+      <BiX className='p-2 rounded-full bg-[#0066A9] my-4 text-4xl text-white absolute right-4 top-0 cursor-pointer z-[999]' onClick={closeModal}/>
+      <img src={sell.thumbnail} alt='thumbnail' className='w-[100%] h-[200px] object-cover rounded'/>
       <h1 className='text-3xl py-4'>{sell.name}</h1>
-      <p className='overflow-y-auto max-h-[100%] leading-8'>{textData}</p>
+      <p className='overflow-y-auto max-h-[100%] leading-8 font-thin'>{textData}</p>
     </div>
   )
 }
