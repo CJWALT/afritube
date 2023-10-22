@@ -37,7 +37,7 @@ const MusicIntro = () => {
               Dive into an immersive world of thrilling adventures and
               challenges with our captivating selection of games!
             </h2>
-            <Link to='/content/music'>
+            <Link to='/content/grandma'>
             <Button
               spec="relative z-[99] my-4 bg-white text-black hover:bg-[grey]"
               cta="View Music & Audio Books"

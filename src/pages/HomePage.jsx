@@ -9,7 +9,6 @@ import GrandmasHut from "../components/GrandmasHut";
 import Testimonial from "../components/Testimonial";
 import PreFooter from "../components/PreFooter";
 import Footer from "../components/Footer";
-import AboutUs from "../components/AboutUs";
 
 const HomePage = () => {
   return (
@@ -24,7 +23,6 @@ const HomePage = () => {
       <Testimonial />
       <PreFooter />
       <Footer />
-      <AboutUs />
     </>
   );
 };
