@@ -54,7 +54,7 @@ const Pricing = () => {
     <span className="relative z-[99]">
     <NavBar />
     </span>
-    <section className="container mx-auto py-4 relative z-[99]">
+    <section className="container mx-auto py-4 relative z-[9] overflow-x-hidden">
       <h2 className="text-2xl text-center pb-4">Pricing</h2>
       <div className="flex flex-col justify-between md:flex-row">
         {offers.map((offer) => (
@@ -89,7 +89,7 @@ const Pricing = () => {
         ))}
       </div>
     </section>
-    <img src={curl} alt="curl" className="absolute top-0 left-[20%] z-[9]"/>
+    <img src={curl} alt="curl" className="absolute top-0 left-[0%] z-[7]"/>
     </>
   );
 };
