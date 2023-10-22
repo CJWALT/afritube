@@ -4,7 +4,9 @@ import AudioSuggestion from "../components/AudioSuggestion";
 import AfricanLiterature from "../components/GrandmasHut/AfricanLiterature";
 import AfricanHistory from "../components/GrandmasHut/AfricanHistory";
 import ExploreAfrica from "../components/GrandmasHut/ExploreAfrica";
-import MusicIntro from "../components/MusicIntro";
+import Favouritecontext from "../store/reducer";
+import { useContext } from "react";
+import TextModal from "../components/GrandmasHut/TextModal";
 
 const GrandMaHut = () => {
   let literature = 'literature';
@@ -15,7 +17,10 @@ const GrandMaHut = () => {
   const [activeTab, setActiveTab] = useState(literature)
   const btn = 'text-sm px-3 w-32  py-0 rounded-[.7rem] border-navButtonIcon border bg-watchBtnTypesBg hover:bg-black hover:text-white'
 
-  
+ 
+  const ctx = useContext(Favouritecontext);
+  const textModal = ctx.state.textModal;
+
   return (
     <div className="container mx-auto p-4 bg-secBlue rounded-lg">
     <div className="flex flex-row flex-wrap self-center justify-center gap-2 py-4 align-center">
@@ -37,6 +42,7 @@ const GrandMaHut = () => {
     {activeTab === history&&  <AfricanHistory />}
      {activeTab === books && <AudiBooks />}
      {activeTab === explore && <ExploreAfrica />}
+     {textModal && <TextModal />}
     </div>
   );
 };

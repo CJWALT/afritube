@@ -9,9 +9,9 @@ import dances from '../src/assets/TextThumbnail/dances.webp'
 import txtToons from '../src/TextFiles/Literature/Explore/AfricanToons.txt';
 import txtBooks from '../src/TextFiles/Literature/Explore/Booklist.txt';
 import cape from '../src/TextFiles/Literature/Explore/CapeVerde.txt';
-import txtDances from '../src/TextFiles/Literature/Explore/AfricanToons.txt';
-import txtFoods from '../src/TextFiles/Literature/Explore/AfricanToons.txt';
-import txtKingdom from '../src/TextFiles/Literature/Explore/AfricanToons.txt';
+import txtDances from '../src/TextFiles/Literature/Explore/Dances.txt';
+import txtFoods from '../src/TextFiles/Literature/Explore/PopularFood.txt';
+import txtKingdom from '../src/TextFiles/Literature/Explore/FamousAfricanKingdoms.txt';
 
 export const literature =  [
     {
