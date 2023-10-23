@@ -3,11 +3,10 @@ import { SlOptionsVertical } from "react-icons/sl";
 import { AiOutlineHeart } from "react-icons/ai";
 import { MdFavorite } from "react-icons/md";
 import Rating from "./Rating";
-import { videos } from "../VideoData";
 import { Link } from "react-router-dom";
 import Favouritescontext from '../store/reducer'
 
-function VideoList() {
+function VideoList({data}) {
   const ctx = useContext(Favouritescontext);
 
   const addToFav =(e)=> {
@@ -33,7 +32,7 @@ function VideoList() {
 
   return (
     <>
-      {videos.map((video) => (
+      {data.map((video) => (
         <div className="flex flex-col items-center justify-center  my-4" key={video.id}>
           <Link to={`${video.id}`} className="relative h-44 w-[100%] md:w-72">
             <img

@@ -1,17 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 import ReactPlayer from "react-player";
 import { useParams } from "react-router-dom";
-import { videos } from "../VideoData";
+import { africanContent, foreignContent } from "../VideoData";
 import { Link } from "react-router-dom";
 import { BiArrowBack } from "react-icons/bi";
 import { FaSadTear } from "react-icons/fa";
-import Countdown from "../components/Countdown";
 
-const VideosPlayPage = () => {
+const VideosPlayPage = ({active}) => {
   const params = useParams();
   const productId = parseInt(params.videoId);
+  
+  let african = 'african';
 
-  const selectedVid = videos.find((vid) => vid.id === productId);
+  const selectedVid = active === african ? africanContent.find((vid) => vid.id === productId) : foreignContent.find((vid) => vid.id === productId);
 
   return (
     <>

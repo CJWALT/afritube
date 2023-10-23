@@ -9,8 +9,6 @@ import PlayLayout from './pages/PlayLayout'
 import WatchLayout from "./pages/WatchLayout";
 import { FavouritesReducer } from "./store/reducer";
 import VideosPlayPage from "./pages/VideosPlayPage";
-import AudiBooks from "./components/GrandmasHut/AudiBooks";
-import AudioFavourites from "./pages/AudioFavourites";
 import { useEffect, useState } from "react";
 import Loader from "./components/loader/Loader";
 import GrandMaHut from "./pages/GrandMaHut";
@@ -18,6 +16,9 @@ import Pricing from "./pages/Pricing";
 
 function App() {
   const [loading, setisloading] = useState(true)
+
+  let african = 'african';
+  const [activeTab, setActiveTab] = useState(african)
 
   const param = window.location.pathname
   
@@ -43,7 +44,7 @@ function App() {
               children: [
                 {
                   index: true,
-                  element: <Watch />,
+                  element: <Watch active={activeTab} setActive={setActiveTab}/>,
                 },
                 {
                   path: "favourites",
@@ -51,7 +52,7 @@ function App() {
                 },
               ],
             },
-            { path: "/content/:videoId", element: <VideosPlayPage /> },
+            { path: "/content/:videoId", element: <VideosPlayPage active={activeTab} /> },
             { path: "music", element: <PlayLayout />,
               // children: [
               //   {path: 'favourites', element: <AudioFavourites />}
