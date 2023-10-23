@@ -1,8 +1,9 @@
 import React from "react";
 import logo from "../assets/AFRITUBE-ICON.png";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
-  const anc = "cursor-pointer text-[grey] py-1";
+  const anc = "cursor-pointer text-[grey] py-1 hover:text-black";
   return (
     <footer className="bg-white">
       <div className="container px-2 mx-auto flex flex-col justify-between py-[150px] md:flex-row">
@@ -14,13 +15,10 @@ const Footer = () => {
           <a className={anc}>Development</a>
         </ul>
         <ul className="flex flex-col">
-          <a className={anc}>
-            Grand Ma's Hut{" "}
-            <span className="ml-2 py-1 px-2 bg-[#FDCA40] rounded text-white">
-              Coming&nbsp;soon
-            </span>
-          </a>
-          <a className={`${anc} hover:text-black`}>Watch</a>
+          <Link to='/content/grandma' className={anc}>
+            Grand Ma's Hut
+          </Link>
+          <Link  to='/content' className={`${anc} hover:text-black`}>Watch</Link>
           <a className={`${anc} hover:text-black`}>Listen</a>
           <a className={anc}>Play</a>
         </ul>
