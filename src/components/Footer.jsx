@@ -19,8 +19,7 @@ const Footer = () => {
             Grand Ma's Hut
           </Link>
           <Link  to='/content' className={`${anc} hover:text-black`}>Watch</Link>
-          <a className={`${anc} hover:text-black`}>Listen</a>
-          <a className={anc}>Play</a>
+          <Link to='/content/grandma' className={anc}>Play</Link>
         </ul>
         <ul className="flex flex-col">
           <a className={anc}> Apple</a>
