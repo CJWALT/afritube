@@ -54,7 +54,7 @@ const Pricing = () => {
     <span className="relative z-[99]">
     <NavBar />
     </span>
-    <section className="container mx-auto py-4 relative z-[9] overflow-x-hidden">
+    <section className="container mx-0 py-4 relative z-[9] overflow-x-hidden md:mx-auto">
       <h2 className="text-2xl text-center pb-4">Pricing</h2>
       <div className="flex flex-col justify-between md:flex-row">
         {offers.map((offer) => (
