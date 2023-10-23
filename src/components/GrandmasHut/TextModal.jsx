@@ -1,11 +1,10 @@
 import React, { useEffect, useState } from 'react'
-import { literature } from '../../TextData';
 import { BiX } from 'react-icons/bi'
 import Favouritecontext from '../../store/reducer';
 import { useContext } from 'react';
 
 const TextModal = () => {
-  const [textData, setTextData] = useState('Somethign went Wrong, try Again')
+  const [textData, setTextData] = useState('Loading...')
 
   const ctx = useContext(Favouritecontext);
   const closeModal =()=> {
@@ -22,7 +21,7 @@ const TextModal = () => {
         setTextData(text)
       })
     } catch (error) {
-      setTextData('Loading...')
+      setTextData('Somethign went Wrong, try Again')
     }
   },[])
   
@@ -33,7 +32,7 @@ const TextModal = () => {
       <BiX className='p-2 rounded-full bg-[#0066A9] my-4 text-4xl text-white absolute right-4 top-0 cursor-pointer z-[999]' onClick={closeModal}/>
       <img src={sell.thumbnail} alt='thumbnail' className='w-[100%] h-[200px] object-cover rounded'/>
       <h1 className='text-3xl py-4'>{sell.name}</h1>
-      <p className='overflow-y-auto max-h-[100%] leading-8 font-thin'>{textData}</p>
+      <p className='overflow-y-auto max-h-[100%] leading-8 font-thin pb-[300px]'>{textData}.</p>
     </div>
   )
 }

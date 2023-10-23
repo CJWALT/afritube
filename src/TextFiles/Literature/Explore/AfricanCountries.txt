@@ -1,0 +1,67 @@
+Here are the 54 African countries by region with their capitals:
+
+North Africa:
+Algeria - Algiers
+Egypt - Cairo  
+Libya - Tripoli
+Morocco - Rabat
+Sudan - Khartoum 
+Tunisia - Tunis
+
+West Africa:
+Benin - Porto-Novo 
+Burkina Faso - Ouagadougou
+Cape Verde - Praia
+Côte d'Ivoire - Yamoussoukro
+Gambia - Banjul
+Ghana - Accra
+Guinea - Conakry
+Guinea-Bissau - Bissau
+Liberia - Monrovia
+Mali - Bamako
+Mauritania - Nouakchott
+Niger - Niamey
+Nigeria - Abuja
+Senegal - Dakar
+Sierra Leone - Freetown
+Togo - Lomé
+
+Central Africa:  
+Cameroon - Yaoundé
+Central African Republic - Bangui  
+Chad - N'Djamena
+Congo - Brazzaville 
+Democratic Republic of the Congo - Kinshasa
+Equatorial Guinea - Malabo
+Gabon - Libreville
+São Tomé and Príncipe - São Tomé
+
+
+
+East Africa:
+Burundi - Gitega 
+Comoros - Moroni
+Djibouti - Djibouti City
+Eritrea - Asmara
+Ethiopia - Addis Ababa  
+Kenya - Nairobi
+Madagascar - Antananarivo
+Malawi - Lilongwe
+Mauritius - Port Louis
+Mozambique - Maputo
+Rwanda - Kigali
+Seychelles - Victoria 
+Somalia - Mogadishu 
+South Sudan - Juba
+Tanzania - Dodoma 
+Uganda - Kampala
+
+Southern Africa:
+Angola - Luanda
+Botswana - Gaborone
+Eswatini - Mbabane
+Lesotho - Maseru
+Namibia - Windhoek
+South Africa - Pretoria
+Zambia - Lusaka 
+Zimbabwe - Harare

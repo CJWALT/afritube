@@ -27,14 +27,14 @@ const GrandMaHut = () => {
       <button className={`${btn} ${activeTab === literature ? 'bg-black text-white' : ''}`} onClick={()=> setActiveTab(literature)}>
         African&nbsp;Literatures{" "}
       </button>
-      <button className={`${btn} ${activeTab === history ? 'bg-black text-white' : ''}`} onClick={()=> setActiveTab(history)}>
-        African&nbsp;History{" "}
+      <button className={`${btn} ${activeTab === explore? 'bg-black text-white' : ''}`} onClick={()=> setActiveTab(explore)}>
+        Explore&nbsp;Africa
       </button>
       <button className={`${btn} ${activeTab === books ? 'bg-black text-white' : ''}`} onClick={()=> setActiveTab(books)}>
         Audio&nbsp;Books
       </button>
-      <button className={`${btn} ${activeTab === explore? 'bg-black text-white' : ''}`} onClick={()=> setActiveTab(explore)}>
-        Explore&nbsp;Africa
+      <button className={`${btn} ${activeTab === history ? 'bg-black text-white' : ''}`} onClick={()=> setActiveTab(history)}>
+        African&nbsp;History{" "}
       </button>
     </div>
     <AudioSuggestion />
