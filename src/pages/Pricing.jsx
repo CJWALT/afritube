@@ -47,7 +47,7 @@ const offers = [
     ],
   },
 ];
-
+ 
 const Pricing = () => {
   return (
     <>
