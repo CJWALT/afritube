@@ -10,7 +10,7 @@ import binoImg from './assets/Thumbnail/bino.jpg';
 import finoImg from './assets/Thumbnail/fino.jpg';
 import idoyinImg from './assets/Thumbnail/idoyin.jpg';
 import khumbaImg from './assets/Thumbnail/khumba.jpg';
-import multiplyImg from './assets/Thumbnail/Multiply.jpg';
+import multiplyImg from './assets/Thumbnail/multiply.jpg';
 
 //foreign content
 import cowVid from './assets/VideoAssests/cow and chicken.mp4'
@@ -33,7 +33,7 @@ export const foreignContent =  [
         "name": "Justice League",
         "thumbnail": justiceL,
         "duration": "4 months ago",
-        "video": akili,
+        "video": justiceVid,
         "length": 31,
         "rating": 4,
       },
