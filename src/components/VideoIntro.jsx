@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import vid from "../assets/VideoAssests/cow and chicken.mp4";
 import cloud from '../assets/Blue-cloud.png'
 import sidecloud from '../assets/side-cloud.png'
@@ -7,6 +7,12 @@ import bright from '../assets/brightElips.png'
 import { NavLink } from "react-router-dom";
 
 const VideoIntro = () => {
+  useEffect(()=> {
+  const video = document.getElementById("myVideo")
+  if(video){
+    video.currentTime = 2
+  }
+  },[])
   return (
     <div className="mt-[150px] blue-background pb-[100px] relative py-8 md:pb-[30px]">
       <div className="w-[100%] h-[20px] bg-white absolute top-0"/>
@@ -30,7 +36,7 @@ const VideoIntro = () => {
              <img src={sidecloud} className="w-[50px] absolute bottom-[0px] right-[-20px]" />
              <img src={sidecloud} className="w-[50px] absolute top-[-15px] right-[-10px]" />
              <span className="w-[100%] h-[250px] bg-white p-[20px] relative z-[99] md:w-[350px]">
-             <video controls  className="h-[100%] w-[100%]  object-cover rounded-[10px]">
+             <video controls id="myVideo"  className="h-[100%] w-[100%]  object-cover rounded-[10px] outline-0">
               <source src={vid} type="video/mp4"/>
             </video>
              </span>

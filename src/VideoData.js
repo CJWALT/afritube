@@ -9,7 +9,7 @@ import akiliImg from './assets/Thumbnail/akili.jpg';
 import binoImg from './assets/Thumbnail/bino.jpg';
 import finoImg from './assets/Thumbnail/fino.jpg';
 import idoyinImg from './assets/Thumbnail/idoyin.jpg';
-import khumbaImg from './assets/Thumbnail/khumba.jpg';
+import khumbaImg from './assets/Thumbnail/Khumba.jpg';
 import multiplyImg from './assets/Thumbnail/multiply.jpg';
 
 //foreign content
