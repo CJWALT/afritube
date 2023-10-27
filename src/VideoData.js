@@ -22,7 +22,7 @@ import supermanVid from './assets/VideoAssests/superman.mp4'
 //local content import
 import akili from './assets/VideoAssests/African/Akili and Me.mp4'
 import Bino from './assets/VideoAssests/African/Bino and Fino.mp4'
-import khumba from './assets/VideoAssests/African/khumba.mp4'
+import khumba from './assets/VideoAssests/African/Khumba.mp4'
 import idoyin from './assets/VideoAssests/African/idoyin.mp4'
 import multiplication from './assets/VideoAssests/African/multiplication.mp4'
 import fino from './assets/VideoAssests/African/sing along.mp4'; 
