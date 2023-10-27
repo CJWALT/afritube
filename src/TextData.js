@@ -12,7 +12,7 @@ import sportsNaij from '../src/assets/TextThumbnail/sportsNigeria.jpg';
 //text docs 
 import txtToons from '../src/TextFiles/Literature/History/AfricanToons.txt';
 import txtBooks from '../src/TextFiles/Literature/History/Booklist.txt';
-import africatxt from '../src/TextFiles/Literature/explore/AfricanCountries.txt'
+import africatxt from '../src/TextFiles/Literature/Explore/AfricanCountries.txt'
 import historicNigeria from '../src/TextFiles/Literature/History/HistoricalEventsNigeria.txt'
 import historicAfrica from '../src/TextFiles/Literature/History/HistoricEvents.txt'
 import musicNigeria from '../src/TextFiles/Literature/History/MusicNigeria.txt'
