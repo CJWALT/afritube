@@ -75,12 +75,12 @@ const NavBar = () => {
           </div>
         </div>
         <div
-          className="relative hamburger z-[99] md:hidden cursor-pointer"
+          className={`relative hamburger ${openSideBar && 'activeHamburger'} z-[99] md:hidden cursor-pointer`}
           onClick={openBarHandler}
         >
-          <span className={`${openSideBar && "activeBar"}`}></span>
-          <span className={`${openSideBar && "activeBar"}`}></span>
-          <span className={`${openSideBar && "activeBar"}`}></span>
+          <span></span>
+          <span ></span>
+          <span ></span>
         </div>
       </div>
      {aboutUs && <AboutUs setAbout={setAboutUs}/>}

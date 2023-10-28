@@ -142,15 +142,15 @@ audio{
     transform: translateY(6px);
  }
 
- .hamburger .activeBar:nth-child(1){
+ .activeHamburger span:nth-child(1){
    transform: translateY(0px);
    rotate: 45deg;
    transition-delay: 0.025s;
  }
- .hamburger .activeBar:nth-child(2){
+ .activeHamburger span:nth-child(2){
   opacity: 0;
 }
-.hamburger .activeBar:nth-child(3){
+.activeHamburger span:nth-child(3){
   transform: translateY(0px);
   rotate: -45deg;
   transition-delay: 0.015s;
