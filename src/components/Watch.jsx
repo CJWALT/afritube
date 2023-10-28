@@ -38,7 +38,7 @@ function Watch({active, setActive}) {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2">
-          { active === african && <VideoList data={african}/>}
+          { active === african && <VideoList data={africanContent}/>}
           { active === foreign && <VideoList data={foreignContent}/>}
         </div>
       </div>
