@@ -5,7 +5,7 @@ import AfricanLiterature from "../components/GrandmasHut/AfricanLiterature";
 import AfricanHistory from "../components/GrandmasHut/AfricanHistory";
 import ExploreAfrica from "../components/GrandmasHut/ExploreAfrica";
 import Favouritecontext from "../store/reducer";
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import TextModal from "../components/GrandmasHut/TextModal";
 
 const GrandMaHut = () => {
@@ -18,6 +18,10 @@ const GrandMaHut = () => {
   const btn = 'text-sm px-3 w-32  py-0 rounded-[.7rem] border-navButtonIcon border bg-watchBtnTypesBg hover:bg-black hover:text-white'
 
  
+  useEffect(()=>{
+    document.body.style.overflowY='auto' 
+  },[])
+
   const ctx = useContext(Favouritecontext);
   const textModal = ctx.state.textModal;
 

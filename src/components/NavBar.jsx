@@ -73,7 +73,7 @@ const NavBar = () => {
             />
           </NavLink>
           </div>
-        </div>
+        </div> 
         <div
           className={`relative hamburger ${openSideBar && 'activeHamburger'} z-[99] md:hidden cursor-pointer`}
           onClick={openBarHandler}

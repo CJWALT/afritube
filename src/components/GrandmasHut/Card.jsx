@@ -1,9 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import Favouritecontext from "../../store/reducer";
 import { useContext } from "react";
+import { history } from "../../TextData";
 
 const Card = ({ data }) => {
-
   const ctx = useContext(Favouritecontext);
   const openModal = (book) => {
     ctx.dispatch({
@@ -14,7 +14,7 @@ const Card = ({ data }) => {
 
   return (
     <>
-      {data.map((book) => (
+      {data.map((book)  => (
         <span key={book.id} onClick={() => openModal(book)}>
         <div
           className="bg-white rounded-md w-[100%] my-4 cursor-pointer md:w-[200px]"
