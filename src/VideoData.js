@@ -9,7 +9,7 @@ import akiliImg from './assets/Thumbnail/akili.jpg';
 import binoImg from './assets/Thumbnail/bino.jpg';
 import finoImg from './assets/Thumbnail/fino.jpg';
 import idoyinImg from './assets/Thumbnail/idoyin.jpg';
-// import khumbaImg from './assets/Thumbnail/khumba.jpg';
+import khumbaImg from './assets/Thumbnail/imgkhumba.jpg';
 import multiplyImg from './assets/Thumbnail/multiply.jpg';
 
 //foreign content
@@ -29,7 +29,7 @@ import fino from './assets/VideoAssests/African/sing along.mp4';
 
 export const foreignContent =  [
       {
-        "id": 1,
+        "id": '1F',
         "name": "Justice League",
         "thumbnail": justiceL,
         "duration": "4 months ago",
@@ -38,7 +38,7 @@ export const foreignContent =  [
         "rating": 4,
       },
       {
-        "id": 2,
+        "id": '2F',
         "name": "All hail King Julian",
         "thumbnail": KingJ,
         "duration": "3 months ago",
@@ -47,7 +47,7 @@ export const foreignContent =  [
         "rating": 3,
       },
       {
-        "id": 3,
+        "id": '3F',
         "name": "Cow & Chicken",
         "thumbnail": Cow,
         "duration": "5 months ago",
@@ -56,7 +56,7 @@ export const foreignContent =  [
         "rating": 4,
       },
       {
-        "id": 4,
+        "id": '4F',
         "name": "Sponge Bob",
         "thumbnail": spongebob,
         "duration": "2 months ago",
@@ -65,7 +65,7 @@ export const foreignContent =  [
         "rating": 4,
       },
       {
-        "id": 5,
+        "id": '5F',
         "name": "SuperMan",
         "thumbnail": superman,
         "duration": "6 months ago",
@@ -74,7 +74,7 @@ export const foreignContent =  [
         "rating": 3,
       },
       {
-        "id": 6,
+        "id": '6F',
         "name": "All hail King Julian",
         "thumbnail": KingJ,
         "duration": "3 months ago",
@@ -88,7 +88,7 @@ export const foreignContent =  [
 
 export const africanContent =  [
   {
-    "id": 1,
+    "id": '1A',
     "name": "Akili and Me",
     "thumbnail": akiliImg,
     "duration": "4 months ago",
@@ -97,7 +97,7 @@ export const africanContent =  [
     "rating": 5,
   },
   {
-    "id": 2,
+    "id": '2A',
     "name": "Bino and Fino",
     "thumbnail": binoImg,
     "duration": "3 months ago",
@@ -106,16 +106,16 @@ export const africanContent =  [
     "rating": 3,
   },
   {
-    "id": 3,
+    "id": '3A',
     "name": "Khumba",
-    "thumbnail": idoyin,
+    "thumbnail": khumbaImg,
     "duration": "5 months ago",
     "video": khumba,
     "length": 60,
     "rating": 3,
   },
   {
-    "id": 4,
+    "id": '4A',
     "name": "Idoyin",
     "thumbnail": idoyinImg,
     "duration": "2 months ago",
@@ -124,7 +124,7 @@ export const africanContent =  [
     "rating": 4,
   },
   {
-    "id": 5,
+    "id": '5A',
     "name": "Solving Multiplication",
     "thumbnail": multiplyImg,
     "duration": "6 months ago",
@@ -133,7 +133,7 @@ export const africanContent =  [
     "rating": 3,
   },
   {
-    "id": 6,
+    "id": '6A',
     "name": "Sing Along",
     "thumbnail": finoImg,
     "duration": "3 months ago",
