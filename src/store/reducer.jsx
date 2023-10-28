@@ -8,7 +8,7 @@ const Favouritecontext = React.createContext({
     recentlyPlayed: [],
     playing: null,
     vidCount: 0,
-    premiumModal: false,
+    premiumModal: false, 
     textModal: false,
     textRefrence: null,
   });
@@ -28,7 +28,8 @@ const Favouritecontext = React.createContext({
     }
     if(dispatch.type === 'PLAYED'){
       let isVisible = state.vidCount > 0 && state.vidCount % 3 === 0
-       return {...state, vidCount: state.vidCount ++, premiumModal: isVisible}
+      console.log(isVisible)
+       return {...state, vidCount: state.vidCount + 1, premiumModal: isVisible}
     }
     if(dispatch.type === 'CLOSECOUNTDOWN'){
       return {...state, premiumModal: false}

@@ -8,7 +8,7 @@ import { FaSadTear } from "react-icons/fa";
 
 const VideosPlayPage = ({active}) => {
   const params = useParams();
-  const productId = parseInt(params.videoId);
+  const productId = params.videoId;
   
   let african = 'african';
 
@@ -17,6 +17,7 @@ const VideosPlayPage = ({active}) => {
   return (
     <>
       {selectedVid ? (
+        <>
         <div className="flex flex-col items-center z-[99]">
           <Link to="/content">
             <div className="fixed inset-0 z-[999] bg-[#000000d3] h-[100vh] w-full  flex items-center justify-center" />
@@ -25,6 +26,10 @@ const VideosPlayPage = ({active}) => {
             <Link to="/content">
               <BiArrowBack className="bg-[grey] text-4xl my-2 rounded-full p-2 bg-[grey]" />
             </Link>
+            <span className="absolute right-0 top-0 flex flex-row-reverse my-1 p-2 items-center">
+            <img src={selectedVid.thumbnail} className="w-[30px] h-[30px] z-[999] my-1 rounded-full object-fit"/>
+            <p className="text-white px-2">{selectedVid.name}</p>
+            </span>
             <div className="h-[500px] bg-[black] rounded-lg ">
               <ReactPlayer
                 url={selectedVid.video}
@@ -38,6 +43,7 @@ const VideosPlayPage = ({active}) => {
             </div>
           </div>
         </div>
+        </>
       ) : (
         <div className="container mx-auto">
           <div className="py-12 flex flex-col items-center justify-center">

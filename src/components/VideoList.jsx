@@ -29,7 +29,6 @@ function VideoList({data}) {
   }
 
  const favourites = ctx.state.favourites;
-console.log(data)
   return (
     <>
       {data.map((video) => (
