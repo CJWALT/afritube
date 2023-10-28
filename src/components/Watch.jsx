@@ -32,7 +32,6 @@ function Watch({active, setActive}) {
         Foreign
       </button>
           </div>
-
           <div>
             <TbArrowsShuffle2 className="self-center justify-end bg-white rounded-full text-6xl p-4" />
           </div>
