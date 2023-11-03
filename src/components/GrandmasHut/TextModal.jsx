@@ -17,10 +17,12 @@ const TextModal = () => {
 
   useEffect(() => {
     function addParagraphs(text) {
+      const isHeading = (paragraph) => /^-.*/.test(paragraph);
+    
       let paragraphs = text.split(/(\r\n)+/).map((paragraph, index) => {
-        if (/^-.*/.test(paragraph)) {
+        if (isHeading(paragraph)) {
           return (
-            <h1 key={index} className="text-l py-2 font-bold">
+            <h1 key={index} className="text-l py-2 font-bold bg-[green]">
               {paragraph.slice(1)}
             </h1>
           );
@@ -32,7 +34,7 @@ const TextModal = () => {
           );
         }
       });
-      console.log(paragraphs);
+    
       setTextData(paragraphs);
     }
 
