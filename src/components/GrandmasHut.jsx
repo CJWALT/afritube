@@ -1,16 +1,21 @@
-import React from "react";
+import React, { useContext } from "react";
 import grandma from "../assets/Grandma.png";
+import stories from "../assets/stories.png";
+import culture from "../assets/culture.png";
+import explore from "../assets/explore.png";
+import cutOut from "../assets/cu.png";
 import hut from "../assets/hutLogo.png";
 import topCloud from "../assets/cloudbtm.png";
 import rainCloud from '../assets/rainCloud.png'
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import Button from "./UI/Button";
+import Favouritecontext from "../store/reducer";
 
 const GrandmasHut = () => {
+  const ctx = useContext(Favouritecontext)
   return (
-    <div className="bg-white relative z-[999] px-[20px] py-[20px] sm:py-[80px]">
-      <img src={rainCloud} className="z-0 absolute left-[-40px] top-[-120px] w-[250px] hidden md:left-[10%] sm:block"/>
-      <img src={topCloud} className="z-0 absolute right-0 top-[-40px]"/>
+    <div className="bg-white relative z-[998] px-[20px] py-[20px] sm:py-[80px] overflow-x-hidden">
+      <img src={topCloud} className="absolute right-0 top-[-40px]"/>
       <div className="container mx-auto flex flex-col-reverse px-[0px] py-6 items-center justify-between md:flex-row xl:px-[200px]">
         <div className="mr-[30px] px-2">
           <img src={hut} />
@@ -26,7 +31,24 @@ const GrandmasHut = () => {
             />
           </NavLink>
         </div>
-          <img src={grandma} className="w-[400px] my-4 z-10" />
+        <div className="relative flex justify-center my-8">
+        <img src={grandma} className="w-[250px] p-8 my-8 z-10 mr-[250px]" />
+        <img src={cutOut} className="absolute top-0 left-0 w-[50px]"/>
+        <Link to='/content/grandma' className="absolute z-[99] top-0" onClick={()=>ctx.dispatch({type: 'BOOKS'})}>
+          <p className="bg-[#FDE197] w-[200px] p-4 rounded-[12px]">Audio Books</p>
+          <img src={stories} className="absolute w-[100px] top-[-90%] right-[-15px]"/>
+        </Link>
+
+        <Link to='/content/grandma' className="absolute z-[99] bottom-0" onClick={()=>ctx.dispatch({type: 'EXPLORE'})}>
+          <p className="bg-[#DC6D33] w-[200px] p-4 rounded-[12px]">Explore Africa</p>
+          <img src={explore} className="absolute w-[100px] top-[-90%] right-[-15px]"/>
+        </Link>
+
+        <Link to='/content/grandma' className="absolute z-[99] top-[40%] left-[150px] sm:left-[250px]" onClick={()=>ctx.dispatch({type: 'HISTORY'})}>
+          <p className="bg-[#78D030] w-[200px] p-4 rounded-[12px]">African History</p>
+          <img src={culture} className="absolute w-[100px] top-[-90%] right-[-15px]"/>
+        </Link>
+        </div>
       </div>
     </div>
   );

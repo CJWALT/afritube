@@ -11,6 +11,7 @@ const Favouritecontext = React.createContext({
     premiumModal: false, 
     textModal: false,
     textRefrence: null,
+    activeTab: 'explore'
   });
 
   const reducer = (state, dispatch) => {
@@ -75,6 +76,14 @@ const Favouritecontext = React.createContext({
       return {...state, textModal: true, textRefrence: dispatch.payload}
     }if(dispatch.type === 'CLOSETEXTMODAL'){
       return {...state, textModal: false, textRefrence: null}
+    }if(dispatch.type === 'EXPLORE'){
+      return {...state, activeTab: 'explore'}
+    }
+    if(dispatch.type === 'BOOKS'){
+      return {...state, activeTab: 'books'}
+    }
+    if(dispatch.type === 'HISTORY'){
+      return {...state, activeTab: 'history'}
     }
     
     return state;
@@ -91,6 +100,7 @@ const Favouritecontext = React.createContext({
       premiumModal: false,
       textModal: false,
       textRefrence: null,
+      activeTab: 'explore'
     })
 
   return (

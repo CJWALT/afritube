@@ -6,13 +6,13 @@ import strike from "../assets/lightning.png";
 import btm from "../assets/cloudbtm.png";
 import { FiArrowRight } from "react-icons/fi";
 import { FiArrowLeft } from "react-icons/fi";
-import aisha from "../assets/Emily.jpg";
+import aisha from "../assets/aisha.jpg";
 import kwame from "../assets/chike.jpg";
 import zainab from "../assets/kristine.jpg";
-import chinedu from "../assets/stor3.jpg";
+import chinedu from "../assets/chinedu.jpg";
 import fatima from "../assets/jessica.jpg";
 import sipho from "../assets/pg1img.jpg";
-import tariro from "../assets/Loginbg.jpg";
+import tariro from "../assets/tariro.jpg";
 
 const reviews = [
   {
@@ -166,7 +166,7 @@ const Testimonial = () => {
                     <img
                       src={review.image}
                       alt="parent image"
-                      className="w-[50px] h-[50px] rounded-full object-cover"
+                      className="w-[50px] object-top h-[50px] rounded-full object-cover"
                     />
                     <h2 className="font-semibold text-lg ml-4">
                       {review.name},{" "}

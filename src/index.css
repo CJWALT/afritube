@@ -10,6 +10,7 @@ html{
 body{
   background-color: #F7FBFE;
   font-family: 'Belanosima', sans-serif;
+  overflow: hidden;
 }
 audio{
   background-color: transparent;

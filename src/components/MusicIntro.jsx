@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
+import rainCloud from '../assets/rainCloud.png'
 import Button from "./UI/Button";
 import bright from "../assets/brightElips.png";
 import cloudSm from "../assets/VectorCloud.png";
@@ -6,12 +7,14 @@ import cloudBig from "../assets/vectorBig.png";
 import stars from "../assets/stars.png";
 import musicPreview from "../assets/musicPreview.png";
 import {Link} from 'react-router-dom'
+import Favouritecontext from "../store/reducer";
 
 const MusicIntro = () => {
   const [clickPromt, setClickPromt] = useState(false)
+  const ctx = useContext(Favouritecontext)
 
   return (
-    <div className="bg-[#01072D] py-[10px] relative pb-[100px]">
+    <div className="bg-[#01072D] py-[10px] relative pb-[100px] z-[999]">
       <img
         src={cloudSm}
         alt="/"
@@ -40,16 +43,18 @@ const MusicIntro = () => {
             <Button
               spec="relative z-[99] my-4 bg-white text-black hover:bg-[grey]"
               cta="View Music & Audio Books"
+              onClick={()=>ctx.dispatch({type: 'BOOKS'})}
             />
             </Link>
           </div>
-          <Link to='/content/music'>
+          <Link to='/content/grandma' onClick={()=>ctx.dispatch({type: 'BOOKS'})}>
           <div className="relative">
             <img src={musicPreview} alt="/" className="cursor-pointer my-4" onMouseOver={()=> setClickPromt(true)} onMouseLeave={()=> setClickPromt(false)}/>
             {clickPromt && <h1 className="bg-white p-4 absolute top-[20px] rounded-full cursor-pointer" onMouseOver={()=> setClickPromt(true)}>Click to Listen to music and Audio books</h1>}
           </div>
           </Link>
         </div>
+        <img src={rainCloud} className="z-[99] absolute left-[-40px] bottom-[-120px] w-[250px] hidden md:left-[10%] sm:block"/>
       </div>
     </div>
   );
