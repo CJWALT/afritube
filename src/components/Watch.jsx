@@ -21,9 +21,8 @@ function Watch({active, setActive}) {
 
   return (
     <div className="container mx-auto">
-      <div className="px-4"></div>
       <div className="bg-secBlue rounded-xl p-7 mx-8 ">
-        <div className="mb-6 flex flex-row relative justify-between gap-20 overflow-y-scroll scrollbar-none">
+        <div className="mb-6 flex flex-row relative justify-between gap-20 overflow-y-scroll">
           <div className="flex flex-row self-center justify-between gap-6 align-center  h-8">
           <button className={`${btn} ${active === african ? 'bg-black text-white' : ''}`} onClick={()=> setActive(african)}>
         African

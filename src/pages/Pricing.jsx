@@ -2,6 +2,7 @@ import React from "react";
 import { BiCheckDouble } from "react-icons/bi";
 import NavBar from "../components/NavBar";
 import curl from '../assets/img/curl.png'
+import { Link } from "react-router-dom";
 
 const offers = [
   {
@@ -83,7 +84,7 @@ const Pricing = () => {
               </div>
             ))}
             </span>
-            <div className="border-[1px] cursor-pointer p-2 rounded-full self-center mt-auto px-5">{offer.state ? 'Start for free' : 'Add Plan'}</div>
+            <Link to={`${offer.state && '/content'}`} className="border-[1px] cursor-pointer p-2 rounded-full self-center mt-auto px-5" onClick={()=> BiCommentX.dispatch({type: 'CLOSECOUNTDOWN'})}>{offer.state ? 'Start for free' : 'Add Plan'}</Link>
             {!offer.state && <h1 className="text-3xl text-black absolute top-[40%] left-[20%] rotate-[-45deg]">Coming Soon</h1>}
           </div>
         ))}

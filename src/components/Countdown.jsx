@@ -6,6 +6,7 @@ import poly from '../assets/img/poly.png'
 import vect from '../assets/img/Vector.png'
 import { BiX } from 'react-icons/bi'
 import Favouritecontext from '../store/reducer'
+import { Link } from 'react-router-dom'
 
 function Countdown() {
   const storedTime = JSON.parse(localStorage.getItem('countdownTime'));
@@ -110,10 +111,10 @@ function Countdown() {
                 <h3 className='text-center font-regular text-[1.3rem]'>Enjoy more entertainment for kids </h3>
                 <a className='font-poppins text-[.7rem] text-linkGray'>Switch to a premium account</a>              
                 <div className='flex flex-col gap-3 justify-center mt-3 lt:flex-row'>
-                  <button disabled className='text-white bg-bgCount px-8 py-1 font-bold rounded-[1.4rem] disabled:opacity-[40%]'>
+                  <Link to='/pricing' className='text-white bg-bgCount px-8 py-1 font-bold rounded-[1.4rem]'>
                     Yes
-                  </button>
-                  <button  className='bg-bgNot px-6 py-1 rounded-[1.4rem]' onClick={closeCountdownModal}> Not Interested</button>
+                  </Link>
+                  <button  className='bg-bgNot px-6 py-1 rounded-[1.4rem]' onClick={closeCountdownModal}>Remind me Later</button>
                 </div>
               </div>
             </div>
