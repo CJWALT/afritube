@@ -18,7 +18,7 @@ const TextModal = () => {
   useEffect(() => {
     function addParagraphs(text) {
       let paragraphs = text.split(/(\r\n)+/).map((paragraph, index) => {
-        if (/^-/.test(paragraph)) {
+        if (/^-.*/.test(paragraph)) {
           return (
             <h1 key={index} className="text-l py-2 font-bold">
               {paragraph.slice(1)}
