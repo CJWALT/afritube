@@ -9,7 +9,7 @@ import eastAfrica from '../src/assets/TextThumbnail/eastAfrica.jpg';
 import MusicNaij from '../src/assets/TextThumbnail/musicNigeria.jpg';
 import naij from '../src/assets/TextThumbnail/nigeria.jpg';
 import sportsNaij from '../src/assets/TextThumbnail/sportsNigeria.jpg';
-import factsThumb from '../src/assets/TextThumbnail/FactsAfrica.jpg';
+import factsThumb from '../src/assets/TextThumbnail/factsAfrica.jpg';
 import geo from '../src/assets/TextThumbnail/geography.jpg';
 import compImg from '../src/assets/TextThumbnail/computer.webp';
 import festImg from '../src/assets/TextThumbnail/festivals.webp';
