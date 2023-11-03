@@ -4,7 +4,7 @@ import Favouritecontext from "../../store/reducer";
 import { useContext } from "react";
 
 const TextModal = () => {
-  const [textData, setTextData] = useState(["Loading..."]);
+  const [textData, setTextData] = useState("Loading...");
 
   const ctx = useContext(Favouritecontext);
   const closeModal = () => {
@@ -16,33 +16,20 @@ const TextModal = () => {
   const sell = ctx.state.textRefrence;
 
   useEffect(() => {
-    function addParagraphs(text) {
-      const isHeading = (paragraph) => /^-.*/.test(paragraph);
-    
-      let paragraphs = text.split(/(\r\n)+/).map((paragraph, index) => {
-        if (isHeading(paragraph)) {
-          return (
-            <h1 key={index} className="text-l py-2 font-bold bg-[green]">
-              {paragraph.slice(1)}
-            </h1>
-          );
-        } else {
-          return (
-            <p key={index} className="py-1 leading-8 bg-[red]">
-              {paragraph}
-            </p>
-          );
-        }
-      });
-    
-      setTextData(paragraphs);
-    }
-
     try {
       fetch(sell.text)
         .then((response) => response.text())
         .then((text) => {
-          addParagraphs(text);
+          const paragraphs = text.split('\n').map((line, index) => (
+            <p key={index}>
+              {line.includes("**") ? (
+                <strong>{line.replace(/\*\*/g, '')}</strong>
+              ) : (
+                line
+              )}
+            </p>
+          ));
+          setTextData(paragraphs);
         });
     } catch (error) {
       setTextData("Something went Wrong, try Again");
@@ -64,10 +51,8 @@ const TextModal = () => {
           alt="thumbnail"
           className="w-[100%] h-[400px] object-cover rounded"
         />
-        <h1 className="text-3xl py-4">{sell.name}hgB</h1>
-        {textData.map((paragraph, index) => (
-          <span key={index}>{paragraph}</span>
-        ))}
+        <h1 className="text-3xl py-4">{sell.name}</h1>
+        {textData}
       </div>
     </div>
   );
