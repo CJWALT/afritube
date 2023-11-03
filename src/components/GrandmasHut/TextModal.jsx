@@ -18,7 +18,7 @@ const TextModal = () => {
   useEffect(() => {
     function addParagraphs(text) {
       let paragraphs = text.split(/(\r\n)+/).map((paragraph, index) => {
-        if (paragraph.startsWith("-")) {
+        if (/^-/.test(paragraph)) {
           return (
             <h1 key={index} className="text-l py-2 font-bold">
               {paragraph.slice(1)}
@@ -64,7 +64,7 @@ const TextModal = () => {
         />
         <h1 className="text-3xl py-4">{sell.name}hg</h1>
         {textData.map((paragraph, index) => (
-          <span key={index} className="flex">{paragraph}</span>
+          <span key={index}>{paragraph}</span>
         ))}
       </div>
     </div>
