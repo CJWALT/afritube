@@ -22,7 +22,7 @@ const SafetySec = () => {
           </button>
         </Link>
       </div>
-      <img src={safety} className="w-[450px] mt-[50px]" />
+      <img src={safety} className="w-[400px] mt-[50px]" />
     </div>
   );
 };

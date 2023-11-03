@@ -1,14 +1,13 @@
-Here are the 54 African countries by region with their capitals:
-
-North Africa:
+-Here are the 54 African countries by region with their capitals:
+-North Africa:
 Algeria - Algiers
-Egypt - Cairo  
+Egypt - Cairo
 Libya - Tripoli
 Morocco - Rabat
 Sudan - Khartoum 
 Tunisia - Tunis
 
-West Africa:
+-West Africa:
 Benin - Porto-Novo  
 Burkina Faso - Ouagadougou
 Cape Verde - Praia
@@ -26,7 +25,7 @@ Senegal - Dakar
 Sierra Leone - Freetown
 Togo - Lomé
 
-Central Africa:  
+-Central Africa:  
 Cameroon - Yaoundé
 Central African Republic - Bangui  
 Chad - N'Djamena
@@ -36,9 +35,7 @@ Equatorial Guinea - Malabo
 Gabon - Libreville
 São Tomé and Príncipe - São Tomé
 
-
-
-East Africa:
+-East Africa:
 Burundi - Gitega 
 Comoros - Moroni
 Djibouti - Djibouti City
@@ -56,7 +53,7 @@ South Sudan - Juba
 Tanzania - Dodoma 
 Uganda - Kampala
 
-Southern Africa:
+-Southern Africa:
 Angola - Luanda
 Botswana - Gaborone
 Eswatini - Mbabane

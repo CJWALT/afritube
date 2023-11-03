@@ -14,16 +14,14 @@ body{
 audio{
   background-color: transparent;
 }
+p::-webkit-scrollbar{
+  display: none;
+}
 .active{ 
   color:black
 }
-
 .btnHover{ 
   background-color: black;
-}
-
-::-webkit-scrollbar {
-  display: none;
 }
 .gradient {
     background: linear-gradient(to bottom, #6AC4FF, #F7FBFE);

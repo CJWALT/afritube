@@ -22,8 +22,8 @@ const MusicIntro = () => {
         alt="/"
         className="absolute top-[-50px] right-0 z-0 lt:top-[-100px]"
       />
-      <img src={stars} alt="/" className="w-[100%] h-[100%] relative z-10" />
-      <div className="container mx-auto px-[0px] xl:px-[200px]">
+      <img src={stars} alt="/" className="w-[100%] absolute z-10" />
+      <div className="container mx-auto pt-6 px-[0px] xl:px-[200px]">
         <div className="relative flex flex-col justify-between items-center md:flex-row">
           <div className="px-2">
             <img
@@ -34,8 +34,7 @@ const MusicIntro = () => {
               Listen
             </h1>
             <h2 className="font-medium text-xl text-white py-3 relative z-[99] md:pr-[20%]">
-              Dive into an immersive world of thrilling adventures and
-              challenges with our captivating selection of games!
+              Escape into rhythms and stories with our extensive collection of tunes and tales
             </h2>
             <Link to='/content/grandma'>
             <Button

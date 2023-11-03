@@ -33,13 +33,6 @@ const PreFooter = () => {
               />
             </span>
           </div>
-          <NavLink to='/'>
-          <Button
-              color="transparent"
-              spec="ml-[0px] text-start text-white text-sm overflow-hidden my-4 w-[100%] px-8 py-2 mr-8 hover:bg-[grey] rounded bg-btn sm:text-center sm:mr-10"
-              cta=" Create an Account"
-            />
-          </NavLink>
         </div>
       </div>
     </div>

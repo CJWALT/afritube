@@ -4,7 +4,7 @@ import cloud from "../assets/white-cloud.png";
 
 const GameIntro = () => {
   return (
-    <div className="relative bg-white  pb-[140px]">
+    <div className="relative bg-white pb-[100px]">
       <img
         src={cloud}
         className="absolute top-[-50px] left-0 z-[9] lt:top-[-100px]"
