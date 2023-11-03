@@ -21,9 +21,9 @@ const TextModal = () => {
         .then((response) => response.text())
         .then((text) => {
           const paragraphs = text.split('\n').map((line, index) => (
-            <p key={index}>
+            <p key={index} className="leading-8">
               {line.includes("**") ? (
-                <strong>{line.replace(/\*\*/g, '')}</strong>
+                <strong className="text-xl">{line.replace(/\*\*/g, '')}</strong>
               ) : (
                 line
               )}

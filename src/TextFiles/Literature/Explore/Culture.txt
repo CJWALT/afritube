@@ -1,6 +1,6 @@
--Cultural Geography
+**Cultural Geography
 
--Historic Cultures
+**Historic Cultures
 The African continent has a unique place in human history. Widely believed to be the “cradle of humankind,” Africa is the only continent with fossil evidence of human beings (Homo sapiens) and their ancestors through each key stage of their evolution. These include the Australopithecines, our earliest ancestors; Homo habilis, our tool-making ancestors; and Homo erectus, a more robust and advanced relative to Homo habilis that was able to walk upright.
 
 These ancestors were the first to develop stone tools, to move out of trees and walk upright, and, most importantly, to explore and migrate. While fossils of Australopithecines and Homo habilis have only been found in Africa, examples of Homo erectus have been found in the Far East, and their tools have been excavated throughout Asia and Europe. This evidence supports the idea that the species of Homo erectus that originated in Africa was the first to successfully migrate and populate the rest of the world.
@@ -27,7 +27,7 @@ The impacts of slavery on Africa are widespread and diverse. Computerized calcul
 
 While Africans suffered greatly during the slave trade, their influence on the rest of the world expanded. Slave populations in North and South America made tremendous economic, political, and cultural contributions to the societies that enslaved them. The standard of living in North and South America—built on agriculture, industry, communication, and transportation—would be much lower if it weren’t for the hard, forced labor of African slaves. Furthermore, many of the Western Hemisphere’s cultural practices, especially in music, food, and religion, are a hybrid of African and local customs.
 
--Contemporary Cultures
+**Contemporary Cultures
 Contemporary Africa is incredibly diverse, incorporating hundreds of native languages and indigenous groups. The majority of these groups blend traditional customs and beliefs with modern societal practices and conveniences. Three groups that demonstrate this are the Maasai, Tuareg, and Bambuti.
 
 Maasai peoples are the original settlers of southern Kenya and northern Tanzania. The Maasai are nomadic pasturalists. Nomadic pastoralists are people who continually move in order to find fresh grasslands or pastures for their livestock. The Maasai migrate throughout East Africa and survive off the meat, blood, and milk of their cattle.
@@ -50,7 +50,7 @@ The Bambuti are believed to have one of the oldest existing bloodlines in the wo
 
 Bambuti groups are spearheading human rights campaigns aimed at increasing their participation in local and international politics. The Mbuti, for instance, are pressuring the government to include them in the peace process of the Democratic Republic of the Congo. Mbuti leaders argue that their people were killed, forced into slavery, and even eaten during the Congo Civil War, which officially ended in 2003. Mbuti leaders have appeared at the United Nations to gather and present testimony on human rights abuses during and after the war. Their efforts led to the presence of U.N. peacekeeping forces in the Ituri Forest.
 
--Political Geography
+**Political Geography
 
 Africa’s history and development have been shaped by its political geography. Political geography is the internal and external relationships between various governments, citizens, and territories.
 
@@ -73,7 +73,7 @@ World War II (1939-1945) empowered Africans to confront colonial rule. Africans 
 
 By 1966, all but six African countries were independent nation-states. Funding from the Soviet Union and independent African states was integral to the success of Africa’s independence movements. Regions in Africa continue to fight for their political independence. Western Sahara, for instance, has been under Moroccan control since 1979. The United Nations is currently sponsoring talks between Morocco and a Western Sahara rebel group called the Polisario Front, which supports independence.
 
--Contemporary Issues
+**Contemporary Issues
 Managing inter-ethnic conflict continues to be an important factor in maintaining national, regional, and continent-wide security. One of the chief areas of conflict is the struggle between sedentary and nomadic groups over control of resources and land.
 
 The conflict in Sudan’s Darfur region, for example, is between nomadic and sedentary communities who are fighting over water and grazing rights for livestock. The conflict also involves religious, cultural, and economic tensions. In 2003, the Sudan Liberation Army (SLA) and Justice and Equality Movement (JEM), groups from Darfur, attacked government targets in Sudan’s capital, Khartoum.
