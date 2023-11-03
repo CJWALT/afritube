@@ -62,9 +62,9 @@ const TextModal = () => {
           alt="thumbnail"
           className="w-[100%] h-[400px] object-cover rounded"
         />
-        <h1 className="text-3xl py-4">{sell.name}</h1>
+        <h1 className="text-3xl py-4">{sell.name}hg</h1>
         {textData.map((paragraph, index) => (
-          <span key={index}>{paragraph}</span>
+          <span key={index} className="flex">{paragraph}</span>
         ))}
       </div>
     </div>
