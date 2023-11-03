@@ -26,7 +26,7 @@ const TextModal = () => {
           );
         } else {
           return (
-            <p key={index} className="py-1 leading-8">
+            <p key={index} className="py-1 leading-8 bg-[red]">
               {paragraph}
             </p>
           );
@@ -63,11 +63,9 @@ const TextModal = () => {
           className="w-[100%] h-[400px] object-cover rounded"
         />
         <h1 className="text-3xl py-4">{sell.name}</h1>
-        {React.Fragment}
         {textData.map((paragraph, index) => (
           <span key={index}>{paragraph}</span>
         ))}
-        {React.Fragment}
       </div>
     </div>
   );
