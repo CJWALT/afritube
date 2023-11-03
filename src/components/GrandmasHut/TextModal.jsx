@@ -23,7 +23,7 @@ const TextModal = () => {
             <h1 key={index} className="text-l py-2 font-bold">
               {paragraph.slice(1)}
             </h1>
-          ); // Remove the leading "-"
+          );
         } else {
           return (
             <p key={index} className="py-1 leading-8">
@@ -53,19 +53,21 @@ const TextModal = () => {
       autoFocus
     >
       <div className="container mx-auto relative">
-      <BiX
-        className="p-2 rounded-full bg-[#0066A9] text-4xl text-white absolute right-[-9px] top-[-9px] cursor-pointer z-[999]"
-        onClick={closeModal}
-      />
-      <img
-        src={sell.thumbnail}
-        alt="thumbnail"
-        className="w-[100%] h-[400px] object-cover rounded"
-      />
+        <BiX
+          className="p-2 rounded-full bg-[#0066A9] text-4xl text-white absolute right-[-9px] top-[-9px] cursor-pointer z-[999]"
+          onClick={closeModal}
+        />
+        <img
+          src={sell.thumbnail}
+          alt="thumbnail"
+          className="w-[100%] h-[400px] object-cover rounded"
+        />
         <h1 className="text-3xl py-4">{sell.name}</h1>
+        {React.Fragment}
         {textData.map((paragraph, index) => (
           <span key={index}>{paragraph}</span>
         ))}
+        {React.Fragment}
       </div>
     </div>
   );
