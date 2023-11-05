@@ -2,102 +2,101 @@
 @tailwind components;
 @tailwind utilities;
 
-
-html{
+html {
   padding: 0;
   scroll-behavior: smooth;
 }
-body{
-  background-color: #F7FBFE;
-  font-family: 'Belanosima', sans-serif;
+body {
+  background-color: #f7fbfe;
+  font-family: "Belanosima", sans-serif;
   overflow: hidden;
 }
-audio{
+audio {
   background-color: transparent;
 }
-p::-webkit-scrollbar{
+p::-webkit-scrollbar {
   display: none;
 }
-.active{ 
-  color:black
+.active {
+  color: black;
 }
-.btnHover{ 
+.btnHover {
   background-color: black;
 }
 .gradient {
-    background: linear-gradient(to bottom, #6AC4FF, #F7FBFE);
-  }
-
-  .blue-background {
-    background: linear-gradient(to right, #6AC4FF 70%, #F7FBFE);
-  }
-
-  @media(max-width: 768px){
-    .blue-background {
-      background: #6AC4FF;
-  }
-  }
-  .inp input[type="range"]::-webkit-slider-thumb {
-    background-color: red;
-  }
-
-  .btn-bg{
-    background: linear-gradient(to right, #7BCBFF, #12A1FF);
-  }
-  
-
-  .navbtn-bg{
-    background: linear-gradient(to right, #7BCBFF, #0066A9);
-  }
-
-  .pre-footer{
-    background: linear-gradient(to right, #97D6FF 75%, #FFEA7C);
-  }
-   
-  @keyframes bounce {
-    0%, 100% {
-        transform: translate(-50%, -50%) translateY(0);
-    }
-    50% {
-        transform: translate(-50%, -50%) translateY(-100px);
-    }
+  background: linear-gradient(to bottom, #6ac4ff, #f7fbfe);
 }
 
-  .bounce-animation{
-    background-color: #adc7da;
-    padding: 4px;
-    border-radius: 50%;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    animation: bounce 1s infinite;
+.blue-background {
+  background: linear-gradient(to right, #6ac4ff 70%, #f7fbfe);
+}
+
+@media (max-width: 768px) {
+  .blue-background {
+    background: #6ac4ff;
+  }
+}
+.inp input[type="range"]::-webkit-slider-thumb {
+  background-color: red;
+}
+
+.btn-bg {
+  background: linear-gradient(to right, #7bcbff, #12a1ff);
+}
+
+.navbtn-bg {
+  background: linear-gradient(to right, #7bcbff, #0066a9);
+}
+
+.pre-footer {
+  background: linear-gradient(to right, #97d6ff 75%, #ffea7c);
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translate(-50%, -50%) translateY(0);
+  }
+  50% {
+    transform: translate(-50%, -50%) translateY(-100px);
+  }
+}
+
+.bounce-animation {
+  background-color: #adc7da;
+  padding: 4px;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  animation: bounce 1s infinite;
+}
+
+@keyframes flow {
+  0% {
+    transform: translateX(-200%);
   }
 
-  @keyframes flow{
-    0% {
-      transform: translateX(-200%);
-    }
-  
-    100% {
-      transform: translateX(100%);
-    }
+  100% {
+    transform: translateX(100%);
   }
+}
 
-  .flow-animation {
-    position: relative;
-    overflow: hidden;
-    height: 30px;
-  }
+.flow-animation {
+  position: relative;
+  overflow: hidden;
+  height: 30px;
+}
 
-  .flow-animation h2 {
-    top: 10%;
-    left: 0%;
-    width: 200px;
-    text-align: center;
-    color: #ffffff;
-    animation: flow 4s infinite linear;
-  }
-  
+.flow-animation h2 {
+  top: 10%;
+  left: 0%;
+  width: 200px;
+  text-align: center;
+  color: #ffffff;
+  animation: flow 4s infinite linear;
+}
+
 @keyframes slide-in {
   0% {
     transform: translateX(-100%);
@@ -122,38 +121,63 @@ p::-webkit-scrollbar{
 .animate-slide-out {
   animation: slide-out 0.3s ease-in-out forwards;
 }
-
-  .hamburger{
-    display: flex;
-    flex-direction: column;
+@keyframes scale-trans{
+  0%{
+    transform: scale(1);
   }
-  .hamburger span{
-    height: 3px;
-    width: 25px;
-    background-color: black;
-    position: absolute;
-    right: 0;
-    border-radius: 8px;
-    transition: 0.5s;
+  50%{
+    transform: scale(1.1);
   }
-
-  .hamburger span:nth-child(1){
-     transform: translateY(-6px);
+  100%{
+ transform: scale(1);
   }
+}
+.books{
+  animation: scale-trans 1s ease-in-out infinite;
+  animation-delay: 0s;
+}
 
-  .hamburger span:nth-child(3){
-    transform: translateY(6px);
- }
+.history {
+  animation: scale-trans 1s ease-in-out infinite;
+  animation-delay: .5s;
+}
 
- .activeHamburger span:nth-child(1){
-   transform: translateY(0px);
-   rotate: 45deg;
-   transition-delay: 0.025s;
- }
- .activeHamburger span:nth-child(2){
+.explore {
+  animation: scale-trans 1s ease-in-out infinite;
+  animation-delay: 2s;
+}
+
+.hamburger {
+  display: flex;
+  flex-direction: column;
+}
+.hamburger span {
+  height: 3px;
+  width: 25px;
+  background-color: black;
+  position: absolute;
+  right: 0;
+  border-radius: 8px;
+  transition: 0.5s;
+}
+
+.hamburger span:nth-child(1) {
+  transform: translateY(-6px);
+}
+
+.hamburger span:nth-child(3) {
+  transform: translateY(6px);
+}
+
+.activeHamburger span:nth-child(1) {
+  transform: translateY(0px);
+  rotate: 45deg;
+  transition-delay: 0.025s;
+}
+.activeHamburger span:nth-child(2) {
   opacity: 0;
 }
-.activeHamburger span:nth-child(3){
+.activeHamburger span:nth-child(3) {
   transform: translateY(0px);
   rotate: -45deg;
   transition-delay: 0.015s;

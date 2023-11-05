@@ -31,20 +31,20 @@ const GrandmasHut = () => {
             />
           </NavLink>
         </div>
-        <div className="relative flex justify-center my-8">
+        <div className="relative flex justify-center my-8 pl-14 sm:pl-0">
         <img src={grandma} className="w-[250px] p-8 my-8 z-10 mr-[250px]" />
         <img src={cutOut} className="absolute top-0 left-0 w-[50px]"/>
-        <Link to='/content/grandma' className="absolute z-[99] top-0" onClick={()=>ctx.dispatch({type: 'BOOKS'})}>
+        <Link to='/content/grandma' className="absolute z-[99] top-0 books" onClick={()=>ctx.dispatch({type: 'BOOKS'})}>
           <p className="bg-[#FDE197] w-[200px] p-4 rounded-[12px]">Audio Books</p>
           <img src={stories} className="absolute w-[100px] top-[-90%] right-[-15px]"/>
         </Link>
 
-        <Link to='/content/grandma' className="absolute z-[99] bottom-0" onClick={()=>ctx.dispatch({type: 'EXPLORE'})}>
+        <Link to='/content/grandma' className="absolute z-[99] bottom-0 explore" onClick={()=>ctx.dispatch({type: 'EXPLORE'})}>
           <p className="bg-[#DC6D33] w-[200px] p-4 rounded-[12px]">Explore Africa</p>
           <img src={explore} className="absolute w-[100px] top-[-90%] right-[-15px]"/>
         </Link>
 
-        <Link to='/content/grandma' className="absolute z-[99] top-[40%] left-[150px] sm:left-[250px]" onClick={()=>ctx.dispatch({type: 'HISTORY'})}>
+        <Link to='/content/grandma' className="absolute z-[99] top-[40%] left-[150px] sm:left-[250px] history" onClick={()=>ctx.dispatch({type: 'HISTORY'})}>
           <p className="bg-[#78D030] w-[200px] p-4 rounded-[12px]">African History</p>
           <img src={culture} className="absolute w-[100px] top-[-90%] right-[-15px]"/>
         </Link>

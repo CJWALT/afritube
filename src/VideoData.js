@@ -4,6 +4,7 @@ import KingJ from './assets/Thumbnail/allHail.jpg';
 import Cow from './assets/Thumbnail/cow.jpg';
 import spongebob from './assets/Thumbnail/spongebop.jpg';
 import superman from './assets/Thumbnail/superman.jpg';
+import KingJul from './assets/Thumbnail/kingj.jpg'
 
 import akiliImg from './assets/Thumbnail/akili.jpg';
 import binoImg from './assets/Thumbnail/bino.jpg';
@@ -75,11 +76,11 @@ export const foreignContent =  [
       },
       {
         "id": '6F',
-        "name": "All hail King Julian",
-        "thumbnail": KingJ,
-        "duration": "3 months ago",
+        "name": " King Julien XIII",
+        "thumbnail": KingJul,
+        "duration": "4 months ago",
         "video": kingJVid,
-        "length": 28,
+        "length": 30,
         "rating": 5,
       },
 ]
