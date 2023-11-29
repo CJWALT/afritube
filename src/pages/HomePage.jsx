@@ -9,12 +9,20 @@ import GrandmasHut from "../components/GrandmasHut";
 import Testimonial from "../components/Testimonial";
 import PreFooter from "../components/PreFooter";
 import Footer from "../components/Footer";
+import VideoCarousal from "../components/carousal/VideoCarousal";
+import AudioCarousal from "../components/carousal/AudioCarousal";
+import AudioPlayer from "../components/AudioPlayer";
 
 const HomePage = () => {
   return (
     <>
       <NavBar />
       <Hero />
+      <VideoCarousal />
+      <AudioCarousal />
+      <div className="container mx-auto inset-x-0 fixed bottom-0 z-[9999]">
+      <AudioPlayer />
+      </div>
       <SafetySec />
       <VideoIntro />
       <GameIntro />

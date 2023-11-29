@@ -4,7 +4,7 @@ import { AiOutlineHeart } from "react-icons/ai";
 import { MdFavorite } from "react-icons/md";
 import Rating from "./Rating";
 import { Link } from "react-router-dom";
-import Favouritescontext from '../store/reducer'
+import Favouritescontext from '../store/reducer' 
 
 function VideoList({data}) {
   const ctx = useContext(Favouritescontext);
@@ -33,7 +33,7 @@ function VideoList({data}) {
     <>
       {data.map((video) => (
         <div className="flex flex-col items-center justify-center  my-4" key={video.id}>
-          <Link to={`${video.id}`} className="relative h-44 w-[100%] md:w-72">
+          <Link to={`${video.id}`} className="relative h-40 w-[100%] md:w-72">
             <img
               src={video.thumbnail}
               className=" h-[100%] rounded w-full object-cover rounded-t-[2rem]"

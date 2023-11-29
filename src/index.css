@@ -43,6 +43,9 @@ p::-webkit-scrollbar {
 .btn-bg {
   background: linear-gradient(to right, #7bcbff, #12a1ff);
 }
+.btn-bg:hover{
+  background: grey;
+}
 
 .navbtn-bg {
   background: linear-gradient(to right, #7bcbff, #0066a9);

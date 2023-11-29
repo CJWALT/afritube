@@ -10,8 +10,8 @@ const GameIntro = () => {
         className="absolute top-[-50px] left-0 z-[9] lt:top-[-100px]"
       />
       <div className="container mx-auto px-[0px] py-6 xl:px-[200px]">
-        <div className="relative flex flex-col justify-between items-center md:flex-row">
-          <span className="py-8 px-2">
+        <div className="relative flex flex-col justify-between items-center md:flex-row-reverse">
+          <span className="py-8 px-2 md:w-1/2">
             <h1 className="font-bold text-3xl text-primary relative z-[99]">
               Play Games
             </h1>
@@ -27,7 +27,9 @@ const GameIntro = () => {
               </h2>
             </div>
           </span>
+          <div className="w-1/2">
           <img src={gameImage} className="w-[480px] mt-8 relative z-[99]" />
+          </div>
         </div>
       </div>
     </div>

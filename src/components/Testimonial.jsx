@@ -8,7 +8,7 @@ import { FiArrowRight } from "react-icons/fi";
 import { FiArrowLeft } from "react-icons/fi";
 import aisha from "../assets/aisha.jpg";
 import kwame from "../assets/chike.jpg";
-import zainab from "../assets/kristine.jpg";
+import zainab from "../assets/kristine.jpg"; 
 import chinedu from "../assets/chinedu.jpg";
 import fatima from "../assets/jessica.jpg";
 import sipho from "../assets/pg1img.jpg";
