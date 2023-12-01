@@ -11,16 +11,16 @@ const GameIntro = () => {
       />
       <div className="container mx-auto px-[0px] py-6 xl:px-[200px]">
         <div className="relative flex flex-col justify-between items-center md:flex-row-reverse">
-          <span className="py-8 px-2 md:w-1/2">
+          <span className="py-8 px-2 md:w-1/2 text-end">
             <h1 className="font-bold text-3xl text-primary relative z-[99]">
               Play Games
             </h1>
-            <h2 className="font-medium text-xl py-3 relative z-[99] md:pr-[20%]">
+            <h2 className="font-medium text-xl py-3 relative z-[99] ">
               Dive into an immersive world of thrilling adventures and
               challenges with our captivating selection of games!
             </h2>
             <div
-              className={`bg-black p-1 text-white w-[200px] overflow-hidden flow-animation rounded`}
+              className={`bg-black p-1 text-white w-[200px] flex ml-auto overflow-hidden flow-animation rounded`}
             >
               <h2>
                 COMING&nbsp;SOON&nbsp;&nbsp;COMING&nbsp;SOON&nbsp;&nbsp;COMING&nbsp;SOON

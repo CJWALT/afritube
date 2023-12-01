@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 const End = ({show}) => {
   return (
-    <div className="fixed z-[999] bottom-0 left-0 w-[100%] p-8 flex flex-col justify-center bg-[#6AC4FF] justify-between px-[20%] items-start md:flex-row md:items-center">
+    <div className="fixed z-[999] bottom-0 left-0 w-[100%] p-8 flex flex-col bg-[#6AC4FF] justify-between px-[20%] items-start md:flex-row md:items-center">
       <div className="mb-8">
         <h2 className="text-[#DF2935] text-xl">Explore AfriTube <br /> for The Kids You LOVE.</h2>
         <p className="text-sm text-[#4C4A55]">Get you kids to enjoy learning in a safe environment</p>
