@@ -97,7 +97,7 @@ const AudioCarousal = () => {
   };
 
   return (
-    <div className="container mx-auto relative my-10">
+    <div className="container mx-auto px-2 relative my-10 unTap">
       <span className="flex items-end">
       <p className="text-xl">Stories</p>
       <span className="flex items-center ml-4 cursor-pointer">

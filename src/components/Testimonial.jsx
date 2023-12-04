@@ -120,7 +120,7 @@ const Testimonial = () => {
   };
 
   return (
-    <section className="relative bg-[#F1F1F1] mb-[-170px]">
+    <section className="relative bg-[#F1F1F1] mb-[-170px] unTap">
       <img
         src={cloudLeft}
         alt="cloud"
@@ -144,7 +144,7 @@ const Testimonial = () => {
         <img
           src={bird}
           alt="bird svg"
-          className="absolute hidden top-[50px] right-[20%] w-[80px] z-[999] md:block"
+          className="absolute hidden top-[50px] right-[20%] w-[80px] z-[998] md:block"
         />
         <div
           className="flex overflow-hidden cursor-pointer"

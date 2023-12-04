@@ -95,7 +95,7 @@ const VideoCarousal = () => {
   const favourites = ctx.state.favourites;
 
   return (
-    <div className="container mx-auto my-6 relative">
+    <div className="container mx-auto px-2 my-6 relative unTap">
       <h2 className="text-2xl my-2">Watch Fun Content</h2>
       <span className="flex items-end">
         <p className="text-xl">Videos</p>

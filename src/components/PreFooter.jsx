@@ -1,14 +1,14 @@
 import React from "react";
 import { FaGooglePlay, FaApple } from "react-icons/fa";
 import { NavLink } from "react-router-dom";
-import Button from "./UI/Button";
+import Button from "./UI/Button"; 
 import cloud from "../assets/prefootercloud.png";
 
 const PreFooter = () => {
   return (
     <div className="bg-white relative">
       <div className="pt-[100px]">
-        <div className="container mx-auto pre-footer rounded-[40px] px-4 py-16 overflow-hidden relative z-10 flex flex-col justify-between md:flex-row">
+        <div className="container mx-auto pre-footer rounded-[20px] px-4 py-16 overflow-hidden relative z-10 flex flex-col justify-between md:flex-row md:rounded-[40px]">
           <div className="ml-4">
             {" "}
             <h1 className="font-medium text-3xl">

@@ -14,7 +14,7 @@ const MusicIntro = () => {
   const ctx = useContext(Favouritecontext)
 
   return (
-    <div className="bg-[#01072D] py-[10px] relative pb-[80px] z-[999]">
+    <div className="bg-autioIntro py-[10px] relative pb-[80px] z-[998]">
       <img
         src={cloudSm}
         alt="/"
@@ -26,7 +26,7 @@ const MusicIntro = () => {
         className="absolute top-[-50px] right-0 z-0 lt:top-[-100px]"
       />
       <img src={stars} alt="/" className="w-[100%] absolute z-10 opacity-60" />
-      <div className="container mx-auto pt-6 px-[0px] xl:px-[200px]">
+      <div className="container mx-auto pt-6 px-[0px]">
         <div className="relative flex flex-col justify-between items-center md:flex-row">
           <div className="px-2 md:w-1/2">
             <img
@@ -49,7 +49,7 @@ const MusicIntro = () => {
           </div>
           <Link to='/content/grandma' className="md:w-1/2" onClick={()=>ctx.dispatch({type: 'BOOKS'})}>
           <div className="relative">
-            <img src={musicPreview} alt="/" className="cursor-pointer my-4 w-full" onMouseOver={()=> setClickPromt(true)} onMouseLeave={()=> setClickPromt(false)}/>
+            <img src={musicPreview} alt="/" className="cursor-pointer my-4 ml-auto w-[480px]" onMouseOver={()=> setClickPromt(true)} onMouseLeave={()=> setClickPromt(false)}/>
             {clickPromt && <h1 className="bg-white p-4 absolute top-[20px] rounded-full cursor-pointer" onMouseOver={()=> setClickPromt(true)}>Click to Listen to music and Audio books</h1>}
           </div>
           </Link>

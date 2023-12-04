@@ -48,8 +48,8 @@ const AudioPlayer = () => {
   };
 
   return (
-    <>
-   {play && <div className="w-full p-4 relative bg-[#0C1344] rounded-lg ml-[-14px]">
+    <div div className="container mx-auto inset-x-0 fixed bottom-0 z-[9999]">
+   {play && <div className="w-full p-4 relative bg-[#0C1344] rounded-lg">
         <img src={stars} alt="/" className="absolute w-[100%] z-[9]"/>
         <BiX className="absolute right-2 top-1 text-3xl text-white cursor-pointer z-[99]" onClick={closeHandler}/>
       <ReactPlayer
@@ -119,7 +119,7 @@ const AudioPlayer = () => {
         </div>
       </div>
     </div>}
-    </>
+    </div>
   );
 };
 

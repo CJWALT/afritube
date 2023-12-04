@@ -1,8 +1,6 @@
 import React from "react";
 import NavBar from "../components/NavBar";
 import Hero from "../components/Hero";
-import SafetySec from "../components/SafetySec";
-import VideoIntro from "../components/VideoIntro";
 import GameIntro from "../components/GameIntro";
 import MusicIntro from "../components/MusicIntro";
 import GrandmasHut from "../components/GrandmasHut";
@@ -16,15 +14,13 @@ import AudioPlayer from "../components/AudioPlayer";
 const HomePage = () => {
   return (
     <>
-      <NavBar />
+    <div className="container mx-auto z-[999]">
+    <NavBar />
+    </div>
       <Hero />
       <VideoCarousal />
       <AudioCarousal />
-      <div className="container mx-auto inset-x-0 fixed bottom-0 z-[9999]">
       <AudioPlayer />
-      </div>
-      <SafetySec />
-      <VideoIntro />
       <GameIntro />
       <MusicIntro />
       <GrandmasHut />

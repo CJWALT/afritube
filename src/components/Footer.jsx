@@ -6,7 +6,7 @@ const Footer = () => {
   const anc = "cursor-pointer text-[grey] py-1 hover:text-black";
   return (
     <footer className="bg-white">
-      <div className="container px-2 mx-auto flex flex-col justify-between py-[150px] md:flex-row">
+      <div className="container px-2 mx-auto flex flex-col justify-between py-[80px] md:flex-row">
         <img src={logo} alt="/" className="w-[45px] my-4 h-[45px] md:my-0" />
         <ul className="flex flex-col">
           <a className={anc}>Team</a>

@@ -42,8 +42,8 @@ const ParentSecModal = () => {
 
   return (
     <div className="flex justify-center items-center">
-      <div className="fixed inset-0 z-[999] bg-[#0000008f] h-[100vh] w-full  flex items-center justify-center" onClick={closeModalHandler}/>
-      <div className="absolute top-[10%] z-[999] w-[300px]">
+      <div className="fixed inset-0 z-[998] bg-[#0000008f] h-[100vh] w-full  flex items-center justify-center" onClick={closeModalHandler}/>
+      <div className="absolute top-[10%] z-[998] w-[300px]">
       <span className="flex justify-between bg-primary p-2 w-[100%] text-white text-xl rounded-t-lg text-center">
       <div className="flex-1">
         <h1>Parent Security</h1>

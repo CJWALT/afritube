@@ -5,7 +5,7 @@ import curl from '../assets/img/curl.png'
 
 const AboutUs = ({setAbout}) => {
   return (
-    <div className="fixed top-0 left-0 w-[100%] h-[100%] z-[999] bg-[#F0F9FF] rounded">
+    <div className="fixed top-0 left-0 w-[100%] h-[100%] z-[998] bg-[#F0F9FF] rounded">
         <div className="flex flex-col justify-center items-center text-center mx-auto m-4 p-8 w-[100%] md:w-[60%]">
       <BiX className='z-[99] p-2 rounded-full bg-white my-4 text-4xl text-black absolute right-4 top-0 cursor-pointer border-[2px] border-[#6AC4FF]' onClick={()=>setAbout(false)}/>
       <h1 className="font-bold text-4xl my-4"> About Us_</h1>

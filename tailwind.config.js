@@ -12,7 +12,7 @@ export default {
         md: '768px',
         lg: '976px',
         xl: '1440px',
-        "max-w-xl": "1080px",
+        "max-w-xl": "1400px",
       },
 
       colors: {

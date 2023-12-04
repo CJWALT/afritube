@@ -73,7 +73,7 @@ function Countdown() {
               </div> 
 
               <div className='flex flex-col items-center bg-white relative h-24  z-10'>
-                  <small className='relative text-[.7rem] text-red-400 font-semibold mt-1 mb-2 z-[999]'>
+                  <small className='relative text-[.7rem] text-red-400 font-semibold mt-1 mb-2 z-[998]'>
                       FREE TRIAL ENDS IN
                   </small> 
                   <img src={cloudTop} className='w-[100%] absolute top-[-30px] z-[9]'/>

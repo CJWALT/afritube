@@ -20,14 +20,14 @@ const VideosPlayPage = ({active}) => {
         <>
         <div className="flex flex-col items-center z-[99]">
           <Link to="/content">
-            <div className="fixed inset-0 z-[999] bg-[#000000d3] h-[100vh] w-full  flex items-center justify-center" />
+            <div className="fixed inset-0 z-[998] bg-[#000000d3] h-[100vh] w-full  flex items-center justify-center" />
           </Link>
-          <div className="container mx-auto my-4 absolute top-[10%] z-[999]">
+          <div className="container mx-auto my-4 absolute top-[10%] z-[998]">
             <Link to="/content">
-              <BiArrowBack className="bg-[grey] text-4xl my-2 rounded-full p-2 bg-[grey]" />
+              <BiArrowBack className="bg-[grey] text-4xl my-2 rounded-full p-2" />
             </Link>
             <span className="absolute right-0 top-0 flex flex-row-reverse my-1 p-2 items-center">
-            <img src={selectedVid.thumbnail} className="w-[30px] h-[30px] z-[999] my-1 rounded-full object-fit"/>
+            <img src={selectedVid.thumbnail} className="w-[30px] h-[30px] z-[998] my-1 rounded-full object-fit"/>
             <p className="text-white px-2">{selectedVid.name}</p>
             </span>
             <div className="h-[500px] bg-[black] rounded-lg ">

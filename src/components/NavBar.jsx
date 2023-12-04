@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import AboutUs from "./AboutUs";
-import Button from "./UI/Button";
 import Logo from "./UI/Logo";
 
 const NavBar = () => {
   const [openSideBar, setOpenSideBar] = useState(null);
   const [aboutUs, setAboutUs] = useState(false)
+  const [scroll, setscroll] = useState(false)
 
   useEffect(()=>{
     if(openSideBar){
@@ -44,37 +44,38 @@ const NavBar = () => {
     setOpenSideBar(false)
   }
 
+  window.addEventListener('scroll', ()=> {
+    if(window.scrollY >= 280){
+     setscroll(true)
+    }else{
+      setscroll(false)
+    }
+  })
+
   return (
-    <div className="bg-white">
-      <div className="container flex items-center justify-between mx-auto p-2">
+    <>
+      <div className={`${scroll && 'bg-blur' } fhlex items-center left-0 p-2 fixed top-0 w-[100%] z-[999]`}>
         {openSideBar && (
           <div
             className="fixed inset-0 z-[9] bg-[#0000008f] h-[100vh] w-full  flex items-center justify-center"
             onClick={close}
           />
         )}
+        <div className="container mx-auto flex items-center justify-between w-[100%]">
         <Logo />
         <div
-          className={`flex fixed left-0 z-40 top-0 w-[80%] h-[100%] flex-col items-center transform bg-white items-start translate-x-[-500px] md:translate-x-[0px] md:w-auto md:items-center md:justify-between md:flex-row md:relative ${slide}`}
+          className={`flex fixed left-0 z-40 top-0 w-[80%] h-[100%] flex-col items-center transform translate-x-[-500px] md:translate-x-[0px] md:w-auto md:items-center md:justify-between md:flex-row md:relative ${openSideBar && 'bg-white'} ${slide}`}
         >
-          <div className="flex flex-col mt-[150px] md:flex-row md:mt-0">
-            <a className="font-medium mx-2 text-sm my-4 md:my-0 cursor-pointer hover:text-[grey]" onClick={()=> setAboutUs(!aboutUs)}>
-              About&nbsp;Us
-            </a>
-            <NavLink to='/content' className="font-medium mx-2 text-sm my-4 md:my-0 hover:text-[grey]" onClick={onHandleNavchange}>Videos</NavLink>
-            <NavLink to='/content/grandma' className="font-medium mx-2 text-sm my-4 md:my-0 hover:text-[grey]">Stories</NavLink>
+          <div className={`flex flex-col items-center mt-[150px] md:flex-row md:mt-0 ${openSideBar ? 'text-black' : 'text-white'}`}>
+            <NavLink to='/' className="font-medium ml-4  text-sm my-4 md:my-0 hover:text-[grey]">Home</NavLink>
+            <NavLink to='/content' className="font-medium ml-4  text-sm my-4 md:my-0 hover:text-[grey]" onClick={onHandleNavchange}>Videos</NavLink>
+            <NavLink to='/content/grandma' className="font-medium ml-4  text-sm my-4 md:my-0 hover:text-[grey]">Stories</NavLink>
+            <NavLink to='/pricing' className="font-medium ml-4  text-sm my-4 md:my-0 hover:text-[grey]">Pricing</NavLink>
           </div>
           <div>
-          <NavLink to='/content'>
-          <Button
-              color="transparent"
-              spec="ml-[0px] text-white md:ml-[100px] hover:bg-[grey] rounded-full bg-btn"
-              cta="Get&nbsp;Started"
-            />
-          </NavLink>
           </div>
-        </div> 
-        <div
+          </div>
+          <div
           className={`relative hamburger ${openSideBar && 'activeHamburger'} z-[99] md:hidden cursor-pointer`}
           onClick={openBarHandler}
         >
@@ -82,9 +83,11 @@ const NavBar = () => {
           <span ></span>
           <span ></span>
         </div>
+        </div> 
+
       </div>
      {aboutUs && <AboutUs setAbout={setAboutUs}/>}
-    </div>
+    </>
   );
 };
 

@@ -11,12 +11,12 @@ import { Link, NavLink } from "react-router-dom";
 import Button from "./UI/Button";
 import Favouritecontext from "../store/reducer";
 
-const GrandmasHut = () => {
+const GrandmasHut = () => { 
   const ctx = useContext(Favouritecontext)
   return (
-    <div className="bg-white relative z-[998] px-[20px] py-[20px] sm:py-[80px] overflow-x-hidden">
+    <div className="bg-white relative z-[997] px-[20px] py-[20px] sm:py-[80px] overflow-x-hidden">
       <img src={topCloud} className="absolute right-0 top-[-40px]"/>
-      <div className="container mx-auto flex flex-col-reverse px-[0px] py-6 items-center justify-between md:flex-row xl:px-[200px]">
+      <div className="container mx-auto flex flex-col-reverse px-[0px] py-6 items-center justify-between md:flex-row">
         <div className="mr-[30px] px-2">
           <img src={hut} />
           <h2 className="text-5xl text-[#A9603A] font-medium my-3">

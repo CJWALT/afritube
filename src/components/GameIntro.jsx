@@ -3,15 +3,12 @@ import gameImage from "../assets/gameImage.png";
 import cloud from "../assets/white-cloud.png";
 
 const GameIntro = () => {
+  const isLargeScreen = window.innerWidth >= 976;
   return (
     <div className="relative bg-white pb-[100px]">
-      <img
-        src={cloud}
-        className="absolute top-[-50px] left-0 z-[9] lt:top-[-100px]"
-      />
-      <div className="container mx-auto px-[0px] py-6 xl:px-[200px]">
+      <div className="container mx-auto px-[0px] py-6">
         <div className="relative flex flex-col justify-between items-center md:flex-row-reverse">
-          <span className="py-8 px-2 md:w-1/2 text-end">
+          <span className="py-8 px-2 md:w-1/2 text-start md:text-end">
             <h1 className="font-bold text-3xl text-primary relative z-[99]">
               Play Games
             </h1>
@@ -20,14 +17,14 @@ const GameIntro = () => {
               challenges with our captivating selection of games!
             </h2>
             <div
-              className={`bg-black p-1 text-white w-[200px] flex ml-auto overflow-hidden flow-animation rounded`}
+              className={`bg-black p-1 text-white w-[200px] flex mr-auto overflow-hidden flow-animation rounded md:mr-0 md:ml-auto`}
             >
-              <h2>
+              <h2 className={`${isLargeScreen ? 'left' : 'right'}`}>
                 COMING&nbsp;SOON&nbsp;&nbsp;COMING&nbsp;SOON&nbsp;&nbsp;COMING&nbsp;SOON
               </h2>
             </div>
           </span>
-          <div className="w-1/2">
+          <div className="md:w-1/2">
           <img src={gameImage} className="w-[480px] mt-8 relative z-[99]" />
           </div>
         </div>

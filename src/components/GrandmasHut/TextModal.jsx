@@ -43,7 +43,7 @@ const TextModal = () => {
     >
       <div className="container mx-auto relative">
         <BiX
-          className="p-2 rounded-full bg-[#0066A9] text-4xl text-white absolute right-[-9px] top-[-9px] cursor-pointer z-[999]"
+          className="p-2 rounded-full bg-[#0066A9] text-4xl text-white absolute right-[-9px] top-[-9px] cursor-pointer z-[998]"
           onClick={closeModal}
         />
         <img
