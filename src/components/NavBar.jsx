@@ -54,7 +54,7 @@ const NavBar = () => {
 
   return (
     <>
-      <div className={`${scroll && 'bg-blur' } fhlex items-center left-0 p-2 fixed top-0 w-[100%] z-[999]`}>
+      <div className={`${scroll && 'bg-blur' } left-0 p-2 fixed top-0 w-[100%] z-[999]`}>
         {openSideBar && (
           <div
             className="fixed inset-0 z-[9] bg-[#0000008f] h-[100vh] w-full  flex items-center justify-center"
@@ -64,7 +64,7 @@ const NavBar = () => {
         <div className="container mx-auto flex items-center justify-between w-[100%]">
         <Logo />
         <div
-          className={`flex fixed left-0 z-40 top-0 w-[80%] h-[100%] flex-col items-center transform translate-x-[-500px] md:translate-x-[0px] md:w-auto md:items-center md:justify-between md:flex-row md:relative ${openSideBar && 'bg-white'} ${slide}`}
+          className={`flex fixed left-0 z-40 top-0 w-[80%] h-[100%] flex-col items-center transform translate-x-[-500px] md:translate-x-[0px] md:w-auto md:items-center md:justify-between md:flex-row md:relative ${openSideBar && 'bg-white h-[100vh]'} ${slide}`}
         >
           <div className={`flex flex-col items-center mt-[150px] md:flex-row md:mt-0 ${openSideBar ? 'text-black' : 'text-white'}`}>
             <NavLink to='/' className="font-medium ml-4  text-sm my-4 md:my-0 hover:text-[grey]">Home</NavLink>
