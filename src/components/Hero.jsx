@@ -8,11 +8,11 @@ const Hero = () => {
   return (
     <div className="mb-4 bg-white pb-8">
       <div className="video-background">
-        <video autoPlay muted loop className="rounded-b-[20%] object-cover">
+        <video autoPlay muted loop className=" object-cover">
           <source src={khumba} type="video/mp4" />
         </video>
         <div className="content-overlay w-[100%] text-center">
-        <div className="absolute inset-0 z-[997] bg-[#000000a1] w-full h-[100%] flex items-center justify-center rounded-b-[20%]"/>
+        <div className="absolute inset-0 z-[997] bg-[#000000a1] w-full h-[100%] flex items-center justify-center "/>
           <span className="flex flex-col items-center h-[100%] justify-center relative z-[998] leading-10">
           <h1 className="text-white text-bold  my-1 px-2 text-4xl md:text-6xl">Safe and fun for little learners</h1>
           <p className="text-white montserrat">
@@ -32,17 +32,17 @@ const Hero = () => {
       </div>
       {/*cards*/}
       <div className="flex flex-col relative items-center justify-center container mx-auto mt-[-60px] z-[998] text-center md:flex-row">
-        <div className="flex flex-col items-center p-4 py-6 border-[1px] border-grey w-[75%] leading-8 bg-white rounded-lg md:rounded-l-lg md:w-1/4">
+        <div className="h-[170px] flex flex-col items-center p-4 py-6 border-[1px] border-grey w-[75%] leading-8 bg-white rounded-lg md:rounded-none md:rounded-l-lg md:w-1/4">
           <FaShieldAlt className="p-4 text-7xl text-white bg-[#59D51F] rounded-full"/>
           <h2 className="text-3xl">Parents</h2>
           <p className="montserrat text-xs font-semibold">Safety First, Learning Always! </p>
         </div>
-        <div className="flex flex-col items-center px-8 pb-8 pt-9 border-[1px] w-[75%] border-grey leading-8 bg-white rounded-lg my-4 md:my-0 md:w-1/4">
+        <div className="h-[200px] flex flex-col items-center px-8 py-6 border-[1px] w-[75%] border-grey leading-8 bg-white rounded-lg my-4 md:my-0 md:w-1/4">
           <HiMiniWindow className="p-4 text-7xl text-white bg-[#F67A20] rounded-full"/>
           <h2 className="text-3xl">Watch&nbsp;Anywhere</h2>
           <p className="montserrat text-xs font-semibold">Watch Afritube at home or on the go!</p>
         </div>
-        <div className="flex flex-col items-center p-4 py-6 border-[1px] border-grey w-[75%] leading-8 bg-white rounded-lg md:rounded-r-lg md:w-1/4">
+        <div className="h-[170px] flex flex-col items-center p-4 py-6 border-[1px] border-grey w-[75%] leading-8 bg-white rounded-lg md:rounded-none md:rounded-r-lg md:w-1/4">
           <GiHut className="p-4 text-7xl text-white bg-[#865FF7] rounded-full"/>
           <h2 className="text-3xl">Grandma’s&nbsp;Hut</h2>
           <p className="montserrat text-xs font-semibold">An enjoyable classroom filled with content & African culture.</p>

@@ -17,10 +17,10 @@ const Card = ({ data }) => {
       {data.map((book)  => (
         <span key={book.id} onClick={() => openModal(book)}>
         <div
-          className="bg-white rounded-md w-[100%] my-4 cursor-pointer md:w-[200px]"
+          className="bg-white rounded-[15px] w-[94%] mx-auto my-4 cursor-pointer"
           onClick={openModal}
         >
-          <img src={book.thumbnail} alt="thumbnail" className="pt-2 h-[140px] w-[100%] object-cover rounded" />
+          <img src={book.thumbnail} alt="thumbnail" className="p-3 rounded-[25px] h-[140px] w-[100%] object-cover" />
           <p className="text-center py-2">{book.name}</p>
         </div>
 

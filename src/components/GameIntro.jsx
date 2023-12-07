@@ -8,7 +8,7 @@ const GameIntro = () => {
     <div className="relative bg-white pb-[100px]">
       <div className="container mx-auto px-[0px] py-6">
         <div className="relative flex flex-col justify-between items-center md:flex-row-reverse">
-          <span className="py-8 px-2 md:w-1/2 text-start md:text-end">
+          <span className="py-8 px-2 md:w-1/2 text-start md:text-start">
             <h1 className="font-bold text-3xl text-primary relative z-[99]">
               Play Games
             </h1>
@@ -17,9 +17,9 @@ const GameIntro = () => {
               challenges with our captivating selection of games!
             </h2>
             <div
-              className={`bg-black p-1 text-white w-[200px] flex mr-auto overflow-hidden flow-animation rounded md:mr-0 md:ml-auto`}
+              className={`bg-black p-1 text-white w-[200px] flex overflow-hidden flow-animation rounded mr-auto`}
             >
-              <h2 className={`${isLargeScreen ? 'left' : 'right'}`}>
+              <h2 className='right'>
                 COMING&nbsp;SOON&nbsp;&nbsp;COMING&nbsp;SOON&nbsp;&nbsp;COMING&nbsp;SOON
               </h2>
             </div>

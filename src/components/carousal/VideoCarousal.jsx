@@ -99,10 +99,10 @@ const VideoCarousal = () => {
       <h2 className="text-2xl my-2">Watch Fun Content</h2>
       <span className="flex items-end">
         <p className="text-xl">Videos</p>
-        <span className="flex items-center ml-4 cursor-pointer">
+        <Link to='/content' className="flex items-center ml-4 cursor-pointer books text-xs">
           <p>See more</p>
           <BiRightArrowAlt className="text-xl" />
-        </span>
+        </Link>
       </span>
       <div
         className="flex overflow-hidden cursor-pointer"

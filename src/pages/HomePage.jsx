@@ -15,7 +15,7 @@ const HomePage = () => {
   return (
     <>
     <div className="container mx-auto z-[999]">
-    <NavBar />
+    <NavBar text={'white'}/>
     </div>
       <Hero />
       <VideoCarousal />

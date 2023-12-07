@@ -17,7 +17,8 @@ const AudioCarousal = () => {
   const [isDown, setIsDown] = useState(false);
   const [startX, setStartX] = useState(0);
   const [scrollLeft, setScrollLeft] = useState(0);
-  const [move, setMove] = useState(100);
+  const [move, setMove] = useState(100)
+  const [transition, setTransition] = useState(false)
 
   useEffect(() => {
     const handleResize = () => {
@@ -66,7 +67,12 @@ const AudioCarousal = () => {
   };
 
   const scrollRightHandler = () => {
+    setTransition(true)
     sliderRef.current.scrollLeft = sliderRef.current.scrollLeft + move;
+    setTimeout(() => {
+      setTransition(false)
+    }, 2000);
+
   };
   const scrollLeftHandler = () => {
     sliderRef.current.scrollLeft = sliderRef.current.scrollLeft - move;
@@ -99,13 +105,14 @@ const AudioCarousal = () => {
   return (
     <div className="container mx-auto px-2 relative my-10 unTap">
       <span className="flex items-end">
-      <p className="text-xl">Stories</p>
+      <p className="text-2xl">Stories</p>
       <span className="flex items-center ml-4 cursor-pointer">
-        <p>See more</p>
+      <Link to='/content/grandma' className="flex items-center books text-xs" onClick={()=>ctx.dispatch({type: 'BOOKS'})}><p>See more</p>
       <BiRightArrowAlt className="text-xl"/>
+      </Link>
       </span>
       </span>
-      <div className="flex my-3 overflow-hidden cursor-pointer"
+      <div className={`flex my-3 overflow-hidden cursor-pointer ${transition && 'transit'}`}
              ref={sliderRef}
              onMouseDown={handleMouseDown}
              onMouseUp={handleMouseUp}

@@ -76,7 +76,7 @@ export const history =  [
     },
     {
         "id" : 8,
-        "name" : "Top AFRICAN CELEBRATIONS and Festivals",
+        "name" : "Top african Festivals",
         "thumbnail" : festImg,
         "text" : festivals
     }

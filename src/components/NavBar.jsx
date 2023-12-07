@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 import AboutUs from "./AboutUs";
 import Logo from "./UI/Logo";
 
-const NavBar = () => {
+const NavBar = ({text}) => {
   const [openSideBar, setOpenSideBar] = useState(null);
   const [aboutUs, setAboutUs] = useState(false)
   const [scroll, setscroll] = useState(false)
@@ -62,15 +62,15 @@ const NavBar = () => {
           />
         )}
         <div className="container mx-auto flex items-center justify-between w-[100%]">
-        <Logo />
+        <Logo text={text}/>
         <div
-          className={`flex fixed left-0 z-40 top-0 w-[80%] h-[100%] flex-col items-center transform translate-x-[-500px] md:translate-x-[0px] md:w-auto md:items-center md:justify-between md:flex-row md:relative ${openSideBar && 'bg-white h-[100vh]'} ${slide}`}
+          className={`flex fixed left-0 z-40 top-0 w-[80%] h-[100%] flex-col items-center transform translate-x-[-500px] md:translate-x-[0px] md:w-1/2 md:items-center md:justify-between md:flex-row md:relative ${openSideBar && 'bg-white h-[100vh]'} ${slide}`}
         >
-          <div className={`flex flex-col items-center mt-[150px] md:flex-row md:mt-0 ${openSideBar ? 'text-black' : 'text-white'}`}>
-            <NavLink to='/' className="font-medium ml-4  text-sm my-4 md:my-0 hover:text-[grey]">Home</NavLink>
-            <NavLink to='/content' className="font-medium ml-4  text-sm my-4 md:my-0 hover:text-[grey]" onClick={onHandleNavchange}>Videos</NavLink>
-            <NavLink to='/content/grandma' className="font-medium ml-4  text-sm my-4 md:my-0 hover:text-[grey]">Stories</NavLink>
-            <NavLink to='/pricing' className="font-medium ml-4  text-sm my-4 md:my-0 hover:text-[grey]">Pricing</NavLink>
+          <div className={`flex flex-col items-center w-1/2 justify-between mt-[150px] md:flex-row md:mt-0 md:ml-auto text-${openSideBar ? 'black' : text}`}>
+            <NavLink to='/' className="font-medium ml-2  text-sm my-4 md:my-0 hover:text-[grey]">Home</NavLink>
+            <NavLink to='/content' className="font-medium ml-2  text-sm my-4 md:my-0 hover:text-[grey]" onClick={onHandleNavchange}>Videos</NavLink>
+            <NavLink to='/content/grandma' className="font-medium ml-2  text-sm my-4 md:my-0 hover:text-[grey]">Stories</NavLink>
+            <NavLink to='/pricing' className="font-medium ml-2  text-sm my-4 md:my-0 hover:text-[grey]">Pricing</NavLink>
           </div>
           <div>
           </div>
@@ -79,9 +79,9 @@ const NavBar = () => {
           className={`relative hamburger ${openSideBar && 'activeHamburger'} z-[99] md:hidden cursor-pointer`}
           onClick={openBarHandler}
         >
-          <span></span>
-          <span ></span>
-          <span ></span>
+          <span className={`bg-${text}`}></span>
+           <span className={`bg-${text}`}></span>
+           <span className={`bg-${text}`}></span>
         </div>
         </div> 
 

@@ -141,11 +141,11 @@ const Testimonial = () => {
         <h1 className="font-semibold text-xl text-center text-black">
           What parents say about us
         </h1>
-        <img
+        {/* <img
           src={bird}
           alt="bird svg"
           className="absolute hidden top-[50px] right-[20%] w-[80px] z-[998] md:block"
-        />
+        /> */}
         <div
           className="flex overflow-hidden cursor-pointer"
           ref={sliderRef}
