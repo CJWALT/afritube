@@ -123,10 +123,9 @@ const AudioCarousal = () => {
              onTouchEnd={handleMouseUp}
       >
         {audios.slice(0, 6).map((audio) => (
-            <div>
+            <div key={audio.id}>
           <div
             className="w-[180px] h-[200px] flex flex-col justify-between bg-white p-2 rounded-lg mx-4 m-4"
-            key={audio.id}
           >
             <img
               src={audio.thumbnail}

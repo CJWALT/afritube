@@ -26,8 +26,8 @@ const Header = () => {
         >
          <Logo />
 
-          <div className="flex hidden border-[1px] border-black rounded-full py-2 px-4 sm:flex">
-            <BiSearch className="text-black text-xl self-center cursor-pointer" />
+          <div className="flex hidden border-[1px] border-grey rounded-full py-2 px-4 sm:flex">
+            <BiSearch className="text-black text-xl self-center cursor-pointer mr-1" />
             <input
               type="search"
               name="search"
