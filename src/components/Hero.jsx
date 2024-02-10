@@ -1,6 +1,7 @@
 import { FaGooglePlay, FaApple, FaShieldAlt } from "react-icons/fa";
 import { GiHut } from "react-icons/gi";
 import { HiMiniWindow } from "react-icons/hi2";
+import posterSrc from '../../src/assets/img/poster.png'
 import khumba from "../assets/VideoAssests/African/Khumba.mp4";
 
 const Hero = () => {
@@ -8,7 +9,7 @@ const Hero = () => {
   return (
     <div className="mb-4 bg-white pb-8">
       <div className="video-background">
-        <video autoPlay muted loop className=" object-cover">
+        <video autoPlay muted loop poster={posterSrc} className=" object-cover">
           <source src={khumba} type="video/mp4" />
         </video>
         <div className="content-overlay w-[100%] text-center">

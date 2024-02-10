@@ -8,7 +8,7 @@ import { FaSadTear } from "react-icons/fa";
 
 const VideosPlayPage = ({active}) => {
   const params = useParams();
-  const productId = params.videoId;
+  const productId = params.videoId; 
   
   let african = 'african';
 
